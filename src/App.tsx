@@ -4,6 +4,7 @@ import { searchGames, type SearchResponse } from './api/search.ts';
 import { BestOffer } from './components/best-offer/best-offer.tsx';
 import { OffersTable } from './components/offers-table/offers-table.tsx';
 import { SearchForm } from './components/search-form/search-form.tsx';
+import { SearchLoader } from './components/search-loader/search-loader.tsx';
 import { StatusMessage } from './components/status-message/status-message.tsx';
 import { STATUS, type Status } from './constants/status.ts';
 import { TEXT } from './constants/text.ts';
@@ -49,9 +50,7 @@ function App() {
           onSubmit={handleSearch}
         />
 
-        {isLoading && (
-          <StatusMessage kind={STATUS.loading}>{TEXT.loading}</StatusMessage>
-        )}
+        {isLoading && <SearchLoader />}
 
         {isError && (
           <StatusMessage kind={STATUS.error}>{error}</StatusMessage>
