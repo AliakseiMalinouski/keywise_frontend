@@ -1,8 +1,10 @@
+import 'dotenv/config';
 import { defineConfig } from '@rspack/cli';
 import { rspack, type SwcLoaderOptions } from '@rspack/core';
 import { ReactRefreshRspackPlugin } from '@rspack/plugin-react-refresh';
 
 const isDev = process.env.NODE_ENV === 'development';
+const apiPath = process.env.KEYWISE_API_PATH ?? 'https://keywise-virid.vercel.app';
 
 export default defineConfig({
   entry: {
@@ -47,6 +49,9 @@ export default defineConfig({
   plugins: [
     new rspack.HtmlRspackPlugin({
       template: './index.html',
+    }),
+    new rspack.DefinePlugin({
+      'process.env.KEYWISE_API_PATH': JSON.stringify(apiPath),
     }),
     isDev && new ReactRefreshRspackPlugin(),
   ],

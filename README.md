@@ -1,36 +1,24 @@
-# Rspack project
+# Keywise frontend
+
+Frontend React приложение поиска цен. Ходит в собственный API keywise_backend: `GET /search?q=''&region=''`.
 
 ## Setup
 
-Install the dependencies:
+Скопируй `.env.example` в `.env` и заполни значения
 
 ```bash
-npm install
+yarn install
 ```
 
 ## Get started
 
-Start the dev server, and the app will be available at <http://localhost:8080>.
-
 ```bash
-npm run dev
+yarn dev
 ```
 
-Build the app for production:
+Приложение откроется на <http://localhost:8080>.
 
 ```bash
-npm run build
+yarn build
+yarn preview
 ```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Learn more
-
-To learn more about Rspack, check out the following resources:
-
-- [Rspack documentation](https://rspack.rs) - explore Rspack features and APIs.
-- [Rspack GitHub repository](https://github.com/web-infra-dev/rspack) - your feedback and contributions are welcome!

@@ -1,9 +1,15 @@
+declare const process: {
+  env: {
+    KEYWISE_API_PATH?: string;
+  };
+};
+
 // CSS modules
 type CSSModuleClasses = { readonly [key: string]: string };
 
 declare module '*.module.css' {
   const classes: CSSModuleClasses;
-  export default classes;
+  export = classes;
 }
 declare module '*.module.scss' {
   const classes: CSSModuleClasses;

@@ -304,6 +304,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^18.0.1":
+  version: 18.0.1
+  resolution: "dotenv@npm:18.0.1"
+  bin:
+    dotenv: dist/index.cjs
+  checksum: 10/8ac4676bfaa39ffc6fd874af0e0f2eb879265a78f3056ad09f2ed0d2402cd4e011c0477b8e4c1cd5d05167a8d7e881975bead18814feae578fbf8132c8730fc7
+  languageName: node
+  linkType: hard
+
 "keywise_frontend@workspace:.":
   version: 0.0.0-use.local
   resolution: "keywise_frontend@workspace:."
@@ -314,6 +323,7 @@ __metadata:
     "@rspack/plugin-react-refresh": "npm:2.0.2"
     "@types/react": "npm:19.3.0"
     "@types/react-dom": "npm:19.3.0"
+    dotenv: "npm:^18.0.1"
     react: "npm:19.3.0"
     react-dom: "npm:19.3.0"
     react-refresh: "npm:0.19.0"

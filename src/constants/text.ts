@@ -1,0 +1,17 @@
+export const TEXT = {
+  brand: 'Keywise',
+  title: 'Поиск игровых ключей',
+  game: 'Игра',
+  gamePlaceholder: 'Elden Ring',
+  region: 'Регион',
+  search: 'Поиск',
+  loading: 'Идёт поиск…',
+  searchFailed: 'Не удалось выполнить поиск',
+  empty: 'Ничего не найдено',
+  bestOffer: 'Лучшее предложение',
+  open: 'Открыть',
+  source: 'Источник',
+  shop: 'Магазин',
+  price: 'Цена',
+  link: 'Ссылка',
+} as const;
