@@ -1,6 +1,6 @@
 # Keywise frontend
 
-React UI for comparing digital game prices. It calls the Keywise Backend API:
+React UI for comparing digital game prices. It calls the [Keywise](https://github.com/AliakseiMalinouski/keywise) Backend API:
 
 ```
 GET /search?q=<game>&region=<code>
