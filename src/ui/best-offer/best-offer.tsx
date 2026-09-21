@@ -1,4 +1,4 @@
-import type { BestOffer as BestOfferData } from '../../api/search.ts';
+import type { BestOffer as BestOfferData } from '../../api/search.types.ts';
 import { TEXT } from '../../constants/text.ts';
 import * as styles from './best-offer.module.css';
 

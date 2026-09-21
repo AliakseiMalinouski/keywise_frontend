@@ -1,4 +1,4 @@
-import type { SearchResponse } from '../../api/search.ts';
+import type { SearchResponse } from '../../api/search.types.ts';
 import { STATUS } from '../../constants/status.ts';
 import { TEXT } from '../../constants/text.ts';
 import { StatusMessage } from '../status-message/status-message.tsx';

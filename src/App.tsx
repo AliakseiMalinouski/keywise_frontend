@@ -1,11 +1,13 @@
 import { useState } from 'react';
 
-import { searchGames, type SearchResponse } from './api/search.ts';
-import { BestOffer } from './components/best-offer/best-offer.tsx';
-import { OffersTable } from './components/offers-table/offers-table.tsx';
-import { SearchForm } from './components/search-form/search-form.tsx';
-import { SearchLoader } from './components/search-loader/search-loader.tsx';
-import { StatusMessage } from './components/status-message/status-message.tsx';
+import { searchGames } from './api/search.ts';
+import type { SearchResponse } from './api/search.types.ts';
+import { BestOffer } from './ui/best-offer/best-offer.tsx';
+import { OffersTable } from './ui/offers-table/offers-table.tsx';
+import { SearchForm } from './ui/search-form/search-form.tsx';
+import { SearchLoader } from './ui/search-loader/search-loader.tsx';
+import { StatusMessage } from './ui/status-message/status-message.tsx';
+import { Wishlist } from './ui/wishlist/wishlist.tsx';
 import { STATUS, type Status } from './constants/status.ts';
 import { TEXT } from './constants/text.ts';
 import * as styles from './App.module.css';
@@ -16,13 +18,13 @@ function App() {
   const [status, setStatus] = useState<Status>(STATUS.idle);
   const [data, setData] = useState<SearchResponse | null>(null);
 
-  async function handleSearch(query: string, region: string) {
+  async function handleSearch(query: string, region: string, steam?: string) {
     setStatus(STATUS.loading);
     setError(null);
     setData(null);
 
     try {
-      const result = await searchGames(query, region);
+      const result = await searchGames(query, region, steam);
       setData(result);
       setStatus(STATUS.success);
       setResetKey((key) => key + 1);
@@ -57,6 +59,7 @@ function App() {
         )}
 
         {isSuccess && data?.best && <BestOffer offer={data.best} />}
+        {isSuccess && data?.wishlist && <Wishlist games={data.wishlist} />}
         {isSuccess && data && <OffersTable data={data} />}
       </section>
     </main>

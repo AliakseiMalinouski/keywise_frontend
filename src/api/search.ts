@@ -1,29 +1,4 @@
-export type OfferPrice = {
-  amount: number;
-  currency: string;
-};
-
-export type Offer = {
-  source: string;
-  title: string;
-  url: string;
-  region?: string;
-  price: OfferPrice;
-};
-
-export type SourceResult = {
-  source: string;
-  data: Offer[];
-};
-
-export type BestOffer = Offer & {
-  marketplace: string;
-};
-
-export type SearchResponse = {
-  result: SourceResult[];
-  best: BestOffer | null;
-};
+import type { SearchResponse } from './search.types.ts';
 
 function apiOrigin(): string {
   const raw = process.env.KEYWISE_API_PATH ?? '';
@@ -47,11 +22,18 @@ function errorMessage(payload: unknown, fallback: string): string {
 export async function searchGames(
   query: string,
   region: string,
+  steam?: string,
 ): Promise<SearchResponse> {
-  const url = `${apiOrigin()}/search?${new URLSearchParams({
+  const params = new URLSearchParams({
     q: query,
     region,
-  })}`;
+  });
+  const steamValue = steam?.trim();
+  if (steamValue) {
+    params.set('steam', steamValue);
+  }
+
+  const url = `${apiOrigin()}/search?${params}`;
 
   const response = await fetch(url);
 

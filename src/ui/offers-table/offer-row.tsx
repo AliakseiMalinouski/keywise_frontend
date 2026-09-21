@@ -8,7 +8,7 @@ type OfferRowProps = {
   row: OfferRowData;
 };
 
-export const OfferRow = memo(function OfferRow({ row }: OfferRowProps) {
+export const OfferRow = memo(({ row }: OfferRowProps) => {
   return (
     <tr className={row.isBest ? styles.best : undefined}>
       <td>{row.marketplace}</td>

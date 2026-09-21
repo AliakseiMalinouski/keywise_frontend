@@ -1,0 +1,64 @@
+.header {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.arrow {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 1.6px solid #18181b;
+  border-bottom: 1.6px solid #18181b;
+  transform: rotate(45deg);
+  transition: transform 0.16s ease;
+}
+
+.arrowOpen {
+  transform: rotate(-135deg);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #71717a;
+}
+
+.found {
+  display: inline-block;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #166534;
+  background: #bbf7d0;
+}
+
+.missing {
+  display: inline-block;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9a3412;
+  background: #fed7aa;
+}
