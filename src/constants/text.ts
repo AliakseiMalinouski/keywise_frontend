@@ -5,7 +5,7 @@ export const TEXT = {
   gamePlaceholder: 'Elden Ring',
   region: 'Регион',
   steam: 'Steam',
-  steamPlaceholder: 'URL профиля или SteamID64',
+  steamPlaceholder: 'URL профиля или SteamID',
   search: 'Поиск',
   loading: 'Идёт поиск…',
   searchFailed: 'Не удалось выполнить поиск',

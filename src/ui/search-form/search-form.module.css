@@ -1,6 +1,8 @@
 .form {
   display: grid;
-  gap: 0.9rem;
+  grid-template-columns: minmax(0, 1.4fr) 5.6rem minmax(0, 1.3fr) auto;
+  gap: 0.7rem 0.65rem;
+  align-items: end;
 }
 
 .input {
@@ -26,12 +28,12 @@
 }
 
 .submit {
-  margin-top: 0.2rem;
   border: 0;
   border-radius: 10px;
-  padding: 0.75rem 1rem;
+  padding: 0.7rem 1.1rem;
   font: inherit;
   font-weight: 560;
+  white-space: nowrap;
   color: #fafafa;
   background: #18181b;
   cursor: pointer;
@@ -44,4 +46,11 @@
 .submit:disabled {
   cursor: not-allowed;
   background: #a1a1aa;
+}
+
+@media (max-width: 720px) {
+  .form {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
 }
