@@ -2,14 +2,16 @@ import { useState } from 'react';
 
 import { searchGames } from './api/search.ts';
 import type { SearchResponse } from './api/search.types.ts';
+import { DEFAULT_SEARCH_REGION, type SearchRegion } from './constants/regions.ts';
+import { STATUS, type Status } from './constants/status.ts';
+import { TEXT } from './constants/text.ts';
 import { BestOffer } from './ui/best-offer/best-offer.tsx';
+import { IdleMap } from './ui/idle-map/idle-map.tsx';
 import { OffersTable } from './ui/offers-table/offers-table.tsx';
 import { SearchForm } from './ui/search-form/search-form.tsx';
 import { SearchLoader } from './ui/search-loader/search-loader.tsx';
 import { StatusMessage } from './ui/status-message/status-message.tsx';
 import { Wishlist } from './ui/wishlist/wishlist.tsx';
-import { STATUS, type Status } from './constants/status.ts';
-import { TEXT } from './constants/text.ts';
 import * as styles from './App.module.css';
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>(STATUS.idle);
   const [data, setData] = useState<SearchResponse | null>(null);
+  const [region, setRegion] = useState<SearchRegion>(DEFAULT_SEARCH_REGION);
 
   async function handleSearch(query: string, region: string, steam?: string) {
     setStatus(STATUS.loading);
@@ -48,9 +51,15 @@ function App() {
 
         <SearchForm
           disabled={status === STATUS.loading}
+          region={region}
           resetKey={resetKey}
+          onRegionChange={setRegion}
           onSubmit={handleSearch}
         />
+
+        {status === STATUS.idle && (
+          <IdleMap region={region} onRegionChange={setRegion} />
+        )}
 
         {isLoading && <SearchLoader />}
 

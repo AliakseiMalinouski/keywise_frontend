@@ -11,19 +11,26 @@ import * as styles from './search-form.module.css';
 
 type SearchFormProps = {
   disabled?: boolean;
+  region: SearchRegion;
   resetKey: number;
+  onRegionChange: (region: SearchRegion) => void;
   onSubmit: (query: string, region: string, steam?: string) => void;
 };
 
-export function SearchForm({ disabled = false, resetKey, onSubmit }: SearchFormProps) {
+export function SearchForm({
+  disabled = false,
+  region,
+  resetKey,
+  onRegionChange,
+  onSubmit,
+}: SearchFormProps) {
   const [query, setQuery] = useState('');
   const [steam, setSteam] = useState('');
-  const [region, setRegion] = useState(DEFAULT_SEARCH_REGION);
 
   useEffect(() => {
     setQuery('');
-    setRegion(DEFAULT_SEARCH_REGION);
-  }, [resetKey]);
+    onRegionChange(DEFAULT_SEARCH_REGION);
+  }, [onRegionChange, resetKey]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -56,7 +63,7 @@ export function SearchForm({ disabled = false, resetKey, onSubmit }: SearchFormP
           className={styles.input}
           name="region"
           value={region}
-          onChange={(event) => setRegion(event.target.value as SearchRegion)}
+          onChange={(event) => onRegionChange(event.target.value as SearchRegion)}
           disabled={disabled}
         >
           {SEARCH_REGIONS.map((code) => (

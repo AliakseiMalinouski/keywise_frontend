@@ -17,7 +17,7 @@ export default defineConfig({
   module: {
     rules: [
       {
-        test: /\.svg$/,
+        test: /\.(?:png|jpe?g|gif|webp|ico|svg)$/i,
         type: 'asset',
       },
       {
@@ -49,6 +49,7 @@ export default defineConfig({
   plugins: [
     new rspack.HtmlRspackPlugin({
       template: './index.html',
+      favicon: './src/assets/gamepad.webp',
     }),
     new rspack.DefinePlugin({
       'process.env.KEYWISE_API_PATH': JSON.stringify(apiPath),
