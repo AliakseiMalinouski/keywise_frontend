@@ -13,37 +13,31 @@ type IdleMapProps = {
 const EU_REGION = 'eu';
 
 export function IdleMap({ region, onRegionChange }: IdleMapProps) {
-  const preparedRegion = region.toUpperCase() as SearchRegion;
-  const defaultTextClassName = `${styles.label}${region === EU_REGION ? ` ${styles.labelOn}` : ''}`;
-
   return (
     <div className={styles.wrap}>
       <svg className={styles.map} viewBox="0 0 760 400" role="group" aria-label={TEXT.region}>
         {REGION_SHAPES.map((shape) => {
           const selected = region === shape.id;
-          const shapeId = shape.id.toUpperCase() as SearchRegion;
-          const inEuroZone = region === 'eu' && EURO_REGIONS.includes(shape.id);
-          const className = `${styles.land}${selected ? ` ${styles.active}` : ''}${inEuroZone ? ` ${styles.zone}` : ''}`;
-          const textClassName = `${styles.label}${selected || inEuroZone ? ` ${styles.labelOn}` : ''}`;
+          const inEuroZone = region === EU_REGION && EURO_REGIONS.includes(shape.id);
 
           return (
             <g key={shape.id}>
               <path
-                tabIndex={0}
+                d={shape.d}
                 role="button"
-                aria-label={shapeId}
-                className={className}
+                tabIndex={0}
                 aria-pressed={selected}
-                onClick={() => onRegionChange(shapeId)}
-                onKeyDown={(event) => handleKey(event, shapeId, onRegionChange)}
+                aria-label={shape.id.toUpperCase()}
+                onClick={() => onRegionChange(shape.id)}
+                onKeyDown={(event) => handleKey(event, shape.id, onRegionChange)}
+                className={`${styles.land}${selected ? ` ${styles.active}` : ''}${inEuroZone ? ` ${styles.zone}` : ''}`}
               />
               <text
                 x={shape.label.x}
                 y={shape.label.y}
-                className={textClassName}
-
+                className={`${styles.label}${selected || inEuroZone ? ` ${styles.labelOn}` : ''}`}
               >
-                {shapeId}
+                {shape.id.toUpperCase()}
               </text>
             </g>
           );
@@ -57,24 +51,24 @@ export function IdleMap({ region, onRegionChange }: IdleMapProps) {
             y="70"
             width="40"
             height="26"
-            tabIndex={0}
             role="button"
-            aria-label={EU_REGION}
+            tabIndex={0}
+            aria-label="EU"
             aria-pressed={region === EU_REGION}
             onClick={() => onRegionChange(EU_REGION)}
             onKeyDown={(event) => handleKey(event, EU_REGION, onRegionChange)}
           />
           <text
-            y="88"
+            className={`${styles.label}${region === EU_REGION ? ` ${styles.labelOn}` : ''}`}
             x="388"
-            className={defaultTextClassName}
+            y="88"
           >
-            {EU_REGION}
+            {EU_REGION.toUpperCase()}
           </text>
         </g>
       </svg>
       <p className={styles.caption}>
-        {TEXT.region} · {preparedRegion}
+        {TEXT.region} · {region.toUpperCase()}
       </p>
     </div>
   );

@@ -56,4 +56,7 @@ export default defineConfig({
     }),
     isDev && new ReactRefreshRspackPlugin(),
   ],
+  devServer: {
+    open: 'http://localhost:8080/'
+  }
 });
