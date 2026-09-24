@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
-import type { WishlistGame } from '../../api/search.types.ts';
 import { TEXT } from '../../constants/text.ts';
+import type { WishlistGame } from '../../api/search.types.ts';
 import * as styles from './wishlist-item.module.css';
 
 type WishlistItemProps = {
@@ -10,20 +10,21 @@ type WishlistItemProps = {
 
 export const WishlistItem = memo(({ game }: WishlistItemProps) => {
   const title = game.title?.trim() || `App ${game.appid}`;
+  const itemClassName = `${styles.item}${game.selected ? ` ${styles.selected}` : ''}`;
 
   return (
-    <li className={`${styles.item}${game.selected ? ` ${styles.selected}` : ''}`}>
+    <li className={itemClassName}>
       <a
-        className={styles.game}
-        href={`https://store.steampowered.com/app/${game.appid}/`}
         target="_blank"
         rel="noreferrer"
+        className={styles.game}
+        href={`https://store.steampowered.com/app/${game.appid}/`}
       >
         <span className={styles.name}>
           <span className={styles.title}>{title}</span>
-          {game.selected ? (
+          {game.selected && (
             <span className={styles.badge}>{TEXT.selectedBadge}</span>
-          ) : null}
+          )}
         </span>
         <span className={styles.link}>{TEXT.wishlistOpen}</span>
       </a>

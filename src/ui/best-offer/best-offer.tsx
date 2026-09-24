@@ -6,7 +6,12 @@ type BestOfferProps = {
   offer: BestOfferData;
 };
 
+const DIVIDER = ' ';
+
 export function BestOffer({ offer }: BestOfferProps) {
+  const marketAndSource = `${offer.marketplace} · ${offer.source}`;
+  const region = offer.region ? ` · ${offer.region.toUpperCase()}` : null;
+
   return (
     <article className={styles.card}>
       <p className={styles.kicker}>{TEXT.bestOffer}</p>
@@ -15,8 +20,10 @@ export function BestOffer({ offer }: BestOfferProps) {
         {offer.price.amount} {offer.price.currency}
       </p>
       <p className={styles.meta}>
-        {offer.marketplace} · {offer.source}
-        {offer.region ? ` · ${offer.region.toUpperCase()}` : null}
+        {marketAndSource}{DIVIDER}
+        {region && (
+          <span>{region}</span>
+        )}
       </p>
       <a className={styles.link} href={offer.url} target="_blank" rel="noreferrer">
         {TEXT.open}

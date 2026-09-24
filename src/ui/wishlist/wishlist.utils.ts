@@ -12,7 +12,7 @@ export function getWishlistItems(games: WishlistGame[]): {
   return { selected, items };
 }
 
-export function gamesCount(count: number): string {
+export function getGamesCount(count: number): string {
   const mod10 = count % 10;
   const mod100 = count % 100;
 

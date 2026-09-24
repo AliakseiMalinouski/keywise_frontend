@@ -1,13 +1,13 @@
 import { useEffect, useState, type FormEvent } from 'react';
 
 import {
-  DEFAULT_SEARCH_REGION,
-  SEARCH_REGIONS,
   type SearchRegion,
+  DEFAULT_SEARCH_REGION,
 } from '../../constants/regions.ts';
 import { TEXT } from '../../constants/text.ts';
 import { Label } from '../label/label.tsx';
 import * as styles from './search-form.module.css';
+import { Regions } from './regions.tsx';
 
 type SearchFormProps = {
   disabled?: boolean;
@@ -39,7 +39,7 @@ export function SearchForm({
       return;
     }
 
-    onSubmit(nextQuery, region, steam.trim() ?? undefined);
+    onSubmit(nextQuery, region, steam.trim());
   }
 
   return (
@@ -66,11 +66,7 @@ export function SearchForm({
           onChange={(event) => onRegionChange(event.target.value as SearchRegion)}
           disabled={disabled}
         >
-          {SEARCH_REGIONS.map((code) => (
-            <option key={code} value={code}>
-              {code.toUpperCase()}
-            </option>
-          ))}
+          <Regions />
         </select>
       </Label>
 

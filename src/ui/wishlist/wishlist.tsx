@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import type { WishlistGame } from '../../api/search.types.ts';
 import { TEXT } from '../../constants/text.ts';
@@ -13,13 +13,14 @@ type WishlistProps = {
 
 export function Wishlist({ games }: WishlistProps) {
   const [open, setOpen] = useState(false);
-  const { selected, items } = getWishlistItems(games);
+  const { selected, items } = useMemo(() => getWishlistItems(games), [games]);
 
   const hasItems = items.length > 0;
   const tone = selected ? styles.found : hasItems ? styles.missing : '';
+  const cardClassName = `${styles.card}${tone ? ` ${tone}` : ''}`;
 
   return (
-    <article className={`${styles.card}${tone ? ` ${tone}` : ''}`}>
+    <article className={cardClassName}>
       <button
         type="button"
         aria-expanded={open}
@@ -28,9 +29,9 @@ export function Wishlist({ games }: WishlistProps) {
         onClick={() => setOpen((value) => !value)}
       >
         <WishlistHeader
+          open={open}
           count={games.length}
           selected={Boolean(selected)}
-          open={open}
         />
       </button>
 
