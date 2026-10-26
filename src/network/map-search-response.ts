@@ -121,7 +121,27 @@ export function mapGameRating(dto: GameRatingDto | null | undefined): GameRating
   };
 }
 
+function mapImage(value: unknown): string | undefined {
+  const image = readString(value);
+  if (!image) {
+    return undefined;
+  }
+
+  try {
+    const url = new URL(image);
+    if (url.protocol !== 'http:' && url.protocol !== 'https:') {
+      return undefined;
+    }
+  } catch {
+    return undefined;
+  }
+
+  return image;
+}
+
 export function mapSearchResponse(dto: SearchResponseDto): SearchResponse {
+  const image = mapImage(dto.image);
+
   return {
     result: dto.result.map((block) => ({
       source: block.source,
@@ -129,6 +149,7 @@ export function mapSearchResponse(dto: SearchResponseDto): SearchResponse {
     })),
     best: dto.best ? mapBestOffer(dto.best) : null,
     rating: mapGameRating(dto.rating),
+    ...(image ? { image } : {}),
     wishlist: dto.wishlist?.map(mapWishlistGame),
   };
 }

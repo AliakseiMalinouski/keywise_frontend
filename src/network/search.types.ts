@@ -50,5 +50,6 @@ export type SearchResponse = {
   result: SourceResult[];
   best: BestOffer | null;
   rating: GameRating | null;
+  image?: string;
   wishlist?: WishlistGame[];
 };

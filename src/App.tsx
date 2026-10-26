@@ -63,7 +63,11 @@ function App() {
           />
         </section>
 
-        <RatingSidebar rating={data?.rating ?? null} status={status} />
+        <RatingSidebar
+          image={data?.image}
+          rating={data?.rating ?? null}
+          status={status}
+        />
       </div>
     </main>
   );

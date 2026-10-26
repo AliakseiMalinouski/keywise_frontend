@@ -50,5 +50,6 @@ export type SearchResponseDto = {
   result: SourceResultDto[];
   best: BestOfferDto | null;
   rating: GameRatingDto | null;
+  image?: string;
   wishlist?: WishlistGameDto[];
 };

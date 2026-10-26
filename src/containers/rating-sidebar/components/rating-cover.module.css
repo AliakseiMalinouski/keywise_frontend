@@ -1,0 +1,10 @@
+.cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 560 / 215;
+  object-fit: cover;
+  border: 1px solid rgb(24 24 27 / 8%);
+  border-radius: 8px;
+  background: #cbd5e1;
+}
