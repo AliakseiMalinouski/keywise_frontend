@@ -1,3 +1,4 @@
+import { parseSearchResponse } from './map-search-response.ts';
 import type { SearchResponse } from './search.types.ts';
 
 function apiOrigin(): string {
@@ -42,5 +43,6 @@ export async function searchGames(
     throw new Error(errorMessage(payload, response.statusText || 'Search failed'));
   }
 
-  return (await response.json()) as SearchResponse;
+  const payload: unknown = await response.json();
+  return parseSearchResponse(payload);
 }

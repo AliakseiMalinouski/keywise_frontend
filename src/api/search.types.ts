@@ -26,8 +26,29 @@ export type WishlistGame = {
   selected: boolean;
 };
 
+export type SteamReview = {
+  recommendationId: string;
+  language: string;
+  text: string;
+  votedUp: boolean;
+  timestamp: number;
+  votesUp: number;
+};
+
+export type GameRating = {
+  appid: number;
+  title: string;
+  score: number;
+  scoreDescription: string;
+  totalPositive: number;
+  totalNegative: number;
+  totalReviews: number;
+  reviews: SteamReview[];
+};
+
 export type SearchResponse = {
   result: SourceResult[];
   best: BestOffer | null;
+  rating: GameRating | null;
   wishlist?: WishlistGame[];
 };

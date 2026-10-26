@@ -7,10 +7,12 @@ type StatusMessageProps = {
 };
 
 export function StatusMessage({ kind, children }: StatusMessageProps) {
+  const role = kind === STATUS.error ? 'alert' : 'status';
+
   return (
     <p
       className={`${styles.message} ${styles[kind]}`}
-      role={kind === STATUS.error ? 'alert' : 'status'}
+      role={role}
     >
       {children}
     </p>

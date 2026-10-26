@@ -1,0 +1,10 @@
+.placeholder {
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px dashed #c7d0dc;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #475569;
+  background: rgb(255 255 255 / 55%);
+}

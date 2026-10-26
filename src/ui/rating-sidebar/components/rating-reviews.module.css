@@ -1,0 +1,34 @@
+.reviews {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.title {
+  margin: 0;
+  padding: 0 0.1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.15rem 0.1rem 0.15rem 0;
+  list-style: none;
+  max-height: calc(100vh - 18rem);
+  overflow: auto;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #cbd5e1;
+}

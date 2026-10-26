@@ -1,15 +1,27 @@
 .page {
   min-height: 100vh;
-  display: grid;
-  justify-items: center;
-  align-content: start;
   padding: 2rem 1.25rem 3rem;
 }
 
-.card {
-  width: min(960px, 100%);
+.shell {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(22rem, 32%);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.main {
+  min-width: 0;
   display: grid;
   gap: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
 }
 
 .header {

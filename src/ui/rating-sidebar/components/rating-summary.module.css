@@ -1,0 +1,38 @@
+.summary {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid #d8dee8;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 5%);
+}
+
+.score {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+.bar {
+  height: 0.5rem;
+  margin-top: 0.15rem;
+  border-radius: 999px;
+  background: #fecaca;
+  overflow: hidden;
+}
+
+.barFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #4ade80, #16a34a);
+}
