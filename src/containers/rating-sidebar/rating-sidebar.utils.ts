@@ -1,4 +1,4 @@
-import type { GameRating } from '../../api/search.types.ts';
+import type { GameRating } from '&network';
 
 export function steamStoreUrl(appid: number): string {
   return `https://store.steampowered.com/app/${appid}`;

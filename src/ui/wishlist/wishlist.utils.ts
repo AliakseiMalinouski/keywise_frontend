@@ -1,4 +1,4 @@
-import type { WishlistGame } from '../../api/search.types.ts';
+import type { WishlistGame } from '&network';
 
 export function getWishlistItems(games: WishlistGame[]): {
   selected: WishlistGame | undefined;

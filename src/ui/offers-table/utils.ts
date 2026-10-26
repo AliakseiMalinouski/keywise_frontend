@@ -1,4 +1,4 @@
-import type { Offer, SearchResponse } from '../../api/search.types.ts';
+import type { Offer, SearchResponse } from '&network';
 
 export type OfferRow = {
   key: string;

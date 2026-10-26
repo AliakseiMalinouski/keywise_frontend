@@ -1,5 +1,5 @@
-import type { GameRating } from '../../../api/search.types.ts';
-import { TEXT } from '../../../constants/text.ts';
+import type { GameRating } from '&network';
+import { TEXT } from '&constants';
 import { formatCount, positivePercent } from '../rating-sidebar.utils.ts';
 import * as styles from './rating-summary.module.css';
 

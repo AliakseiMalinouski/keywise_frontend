@@ -1,6 +1,6 @@
 import { memo, useCallback, type KeyboardEvent } from 'react';
 
-import type { SearchRegion } from '../../../constants/regions.ts';
+import type { SearchRegion } from '&constants';
 import { EU_REGION, handleRegionKey, joinClassNames } from '../idle-map.utils.ts';
 import * as styles from '../idle-map.module.css';
 

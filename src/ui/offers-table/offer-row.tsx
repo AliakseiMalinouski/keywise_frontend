@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { TEXT } from '../../constants/text.ts';
+import { TEXT } from '&constants';
 import * as styles from './offers-table.module.css';
 import type { OfferRow as OfferRowData } from './utils.ts';
 

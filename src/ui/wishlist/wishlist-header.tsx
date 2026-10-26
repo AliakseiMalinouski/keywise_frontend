@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { TEXT } from '../../constants/text.ts';
+import { TEXT } from '&constants';
 import { getGamesCount } from './wishlist.utils.ts';
 import * as styles from './wishlist-header.module.css';
 

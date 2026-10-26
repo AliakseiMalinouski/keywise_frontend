@@ -1,7 +1,6 @@
-import type { SearchResponse } from '../../api/search.types.ts';
-import { STATUS } from '../../constants/status.ts';
-import { TEXT } from '../../constants/text.ts';
-import { StatusMessage } from '../status-message/status-message.tsx';
+import type { SearchResponse } from '&network';
+import { STATUS, TEXT } from '&constants';
+import { StatusMessage } from '&ui/status-message';
 import { OfferRow } from './offer-row.tsx';
 import * as styles from './offers-table.module.css';
 import { toRows } from './utils.ts';

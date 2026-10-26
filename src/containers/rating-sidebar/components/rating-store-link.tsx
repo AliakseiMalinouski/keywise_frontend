@@ -1,4 +1,4 @@
-import { TEXT } from '../../../constants/text.ts';
+import { TEXT } from '&constants';
 import { steamStoreUrl } from '../rating-sidebar.utils.ts';
 import * as styles from './rating-store-link.module.css';
 

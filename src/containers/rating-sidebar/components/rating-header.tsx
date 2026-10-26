@@ -1,4 +1,4 @@
-import { TEXT } from '../../../constants/text.ts';
+import { TEXT } from '&constants';
 import * as styles from './rating-header.module.css';
 
 type RatingHeaderProps = {

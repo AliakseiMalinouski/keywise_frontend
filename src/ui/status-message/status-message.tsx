@@ -1,4 +1,4 @@
-import { STATUS, type Status } from '../../constants/status.ts';
+import { STATUS, type Status } from '&constants';
 import * as styles from './status-message.module.css';
 
 type StatusMessageProps = {

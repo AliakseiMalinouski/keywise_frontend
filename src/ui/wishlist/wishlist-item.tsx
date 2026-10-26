@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
-import { TEXT } from '../../constants/text.ts';
-import type { WishlistGame } from '../../api/search.types.ts';
+import type { WishlistGame } from '&network';
+import { TEXT } from '&constants';
 import * as styles from './wishlist-item.module.css';
 
 type WishlistItemProps = {

@@ -1,7 +1,6 @@
 import { memo, useMemo } from 'react';
 
-import type { SearchRegion } from '../../constants/regions.ts';
-import { TEXT } from '../../constants/text.ts';
+import { TEXT, type SearchRegion } from '&constants';
 import { IdleMapCaption } from './components/idle-map-caption.tsx';
 import { IdleMapEuChip } from './components/idle-map-eu-chip.tsx';
 import { IdleMapRegion } from './components/idle-map-region.tsx';

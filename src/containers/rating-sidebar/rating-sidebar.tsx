@@ -1,8 +1,7 @@
 import { memo } from 'react';
 
-import type { GameRating } from '../../api/search.types.ts';
-import { STATUS, type Status } from '../../constants/status.ts';
-import { TEXT } from '../../constants/text.ts';
+import type { GameRating } from '&network';
+import { STATUS, TEXT, type Status } from '&constants';
 import { RatingContent } from './components/rating-content.tsx';
 import { RatingHeader } from './components/rating-header.tsx';
 import { RatingPlaceholder } from './components/rating-placeholder.tsx';

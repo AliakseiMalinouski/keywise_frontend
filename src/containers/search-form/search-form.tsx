@@ -1,11 +1,11 @@
 import { useEffect, useState, type FormEvent } from 'react';
 
 import {
-  type SearchRegion,
   DEFAULT_SEARCH_REGION,
-} from '../../constants/regions.ts';
-import { TEXT } from '../../constants/text.ts';
-import { Label } from '../label/label.tsx';
+  TEXT,
+  type SearchRegion,
+} from '&constants';
+import { Label } from '&ui/label';
 import * as styles from './search-form.module.css';
 import { Regions } from './regions.tsx';
 

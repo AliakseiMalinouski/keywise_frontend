@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 
-import type { WishlistGame } from '../../api/search.types.ts';
-import { TEXT } from '../../constants/text.ts';
+import type { WishlistGame } from '&network';
+import { TEXT } from '&constants';
 import { WishlistHeader } from './wishlist-header.tsx';
 import { WishlistItem } from './wishlist-item.tsx';
 import { getWishlistItems } from './wishlist.utils.ts';

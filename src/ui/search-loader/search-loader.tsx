@@ -1,4 +1,4 @@
-import { TEXT } from '../../constants/text.ts';
+import { TEXT } from '&constants';
 import * as styles from './search-loader.module.css';
 
 export function SearchLoader() {

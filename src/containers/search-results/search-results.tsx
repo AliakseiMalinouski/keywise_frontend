@@ -1,12 +1,11 @@
-import type { SearchResponse } from '../../api/search.types.ts';
-import type { SearchRegion } from '../../constants/regions.ts';
-import { STATUS, type Status } from '../../constants/status.ts';
-import { BestOffer } from '../best-offer/best-offer.tsx';
-import { IdleMap } from '../idle-map/idle-map.tsx';
-import { OffersTable } from '../offers-table/offers-table.tsx';
-import { SearchLoader } from '../search-loader/search-loader.tsx';
-import { StatusMessage } from '../status-message/status-message.tsx';
-import { Wishlist } from '../wishlist/wishlist.tsx';
+import type { SearchResponse } from '&network';
+import { STATUS, type SearchRegion, type Status } from '&constants';
+import { BestOffer } from '&ui/best-offer';
+import { IdleMap } from '&ui/idle-map';
+import { OffersTable } from '&ui/offers-table';
+import { SearchLoader } from '&ui/search-loader';
+import { StatusMessage } from '&ui/status-message';
+import { Wishlist } from '&ui/wishlist';
 
 type SearchResultsProps = {
   status: Status;

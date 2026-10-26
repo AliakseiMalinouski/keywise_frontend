@@ -1,6 +1,6 @@
 import type { KeyboardEvent } from 'react';
 
-import type { SearchRegion } from '../../constants/regions.ts';
+import type { SearchRegion } from '&constants';
 import { EURO_REGIONS } from './idle-map.shapes.ts';
 
 const EURO_REGION_SET = new Set<SearchRegion>(EURO_REGIONS);

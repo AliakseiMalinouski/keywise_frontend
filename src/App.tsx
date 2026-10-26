@@ -1,13 +1,17 @@
 import { useState } from 'react';
 
-import { searchGames } from './api/search.ts';
-import type { SearchResponse } from './api/search.types.ts';
-import { DEFAULT_SEARCH_REGION, type SearchRegion } from './constants/regions.ts';
-import { STATUS, type Status } from './constants/status.ts';
-import { TEXT } from './constants/text.ts';
-import { RatingSidebar } from './ui/rating-sidebar/rating-sidebar.tsx';
-import { SearchForm } from './ui/search-form/search-form.tsx';
-import { SearchResults } from './ui/search-results/search-results.tsx';
+import { searchGames, type SearchResponse } from '&network';
+import {
+  DEFAULT_SEARCH_REGION,
+  STATUS,
+  TEXT,
+  type SearchRegion,
+  type Status,
+} from '&constants';
+import { RatingSidebar } from '&containers/rating-sidebar';
+import { SearchForm } from '&containers/search-form';
+import { SearchResults } from '&containers/search-results';
+
 import * as styles from './App.module.css';
 
 function App() {

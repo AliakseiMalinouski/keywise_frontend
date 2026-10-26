@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
-import type { SteamReview } from '../../../api/search.types.ts';
-import { TEXT } from '../../../constants/text.ts';
+import type { SteamReview } from '&network';
+import { TEXT } from '&constants';
 import { RatingReview } from './rating-review.tsx';
 import * as styles from './rating-reviews.module.css';
 

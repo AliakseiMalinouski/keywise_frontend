@@ -11,6 +11,13 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "paths": {
+      "&network": ["./src/network/index.ts"],
+      "&network/*": ["./src/network/*"],
+      "&constants": ["./src/constants/index.ts"],
+      "&containers/*": ["./src/containers/*"],
+      "&ui/*": ["./src/ui/*"]
+    },
 
     /* type checking */
     "noUnusedLocals": true,

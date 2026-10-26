@@ -1,4 +1,4 @@
-import type { SearchRegion } from '../../constants/regions.ts';
+import type { SearchRegion } from '&constants';
 
 export type RegionShape = {
   id: SearchRegion;

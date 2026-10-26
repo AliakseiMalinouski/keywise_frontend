@@ -1,4 +1,4 @@
-import { SEARCH_REGIONS } from "../../constants/regions";
+import { SEARCH_REGIONS } from '&constants';
 
 export function Regions () {
     return (

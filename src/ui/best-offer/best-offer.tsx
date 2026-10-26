@@ -1,5 +1,5 @@
-import type { BestOffer as BestOfferData } from '../../api/search.types.ts';
-import { TEXT } from '../../constants/text.ts';
+import type { BestOffer as BestOfferData } from '&network';
+import { TEXT } from '&constants';
 import * as styles from './best-offer.module.css';
 
 type BestOfferProps = {

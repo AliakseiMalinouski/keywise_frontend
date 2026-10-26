@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react';
 
-import type { SteamReview } from '../../../api/search.types.ts';
-import { TEXT } from '../../../constants/text.ts';
+import type { SteamReview } from '&network';
+import { TEXT } from '&constants';
 import {
   formatCount,
   formatReviewDate,

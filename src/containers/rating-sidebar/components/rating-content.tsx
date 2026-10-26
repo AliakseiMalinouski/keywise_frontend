@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import type { GameRating } from '../../../api/search.types.ts';
+import type { GameRating } from '&network';
 import { RatingReviews } from './rating-reviews.tsx';
 import { RatingStoreLink } from './rating-store-link.tsx';
 import { RatingSummary } from './rating-summary.tsx';
