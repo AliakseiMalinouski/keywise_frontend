@@ -1,7 +1,6 @@
 import { memo } from 'react';
 
 import type { GameRating } from '&network';
-import { RatingReviews } from './rating-reviews.tsx';
 import { RatingStoreLink } from './rating-store-link.tsx';
 import { RatingSummary } from './rating-summary.tsx';
 import * as styles from './rating-content.module.css';
@@ -13,13 +12,12 @@ type RatingContentProps = {
 export const RatingContent = memo(function RatingContent({
   rating,
 }: RatingContentProps) {
-  const { appid, reviews } = rating;
+  const { appid } = rating;
 
   return (
     <div className={styles.content}>
       <RatingSummary rating={rating} />
       <RatingStoreLink appid={appid} />
-      <RatingReviews reviews={reviews} />
     </div>
   );
 });

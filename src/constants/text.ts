@@ -32,6 +32,8 @@ export const TEXT = {
   ratingReviews: 'отзывов',
   ratingPositive: 'положительных',
   ratingRecent: 'Недавние отзывы',
+  reviewLang: 'Язык отзывов',
+  ratingReviewsEmpty: 'Нет отзывов на выбранном языке.',
   ratingRecommended: 'Рекомендует',
   ratingNotRecommended: 'Не рекомендует',
   ratingOpenSteam: 'Страница в Steam',

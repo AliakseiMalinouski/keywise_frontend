@@ -24,6 +24,7 @@ export async function searchGames(
   query: string,
   region: string,
   steam?: string,
+  reviewLang?: string,
 ): Promise<SearchResponse> {
   const params = new URLSearchParams({
     q: query,
@@ -32,6 +33,10 @@ export async function searchGames(
   const steamValue = steam?.trim();
   if (steamValue) {
     params.set('steam', steamValue);
+  }
+  const reviewLangValue = reviewLang?.trim().toLowerCase();
+  if (reviewLangValue && reviewLangValue !== 'all') {
+    params.set('reviewLang', reviewLangValue);
   }
 
   const url = `${apiOrigin()}/search?${params}`;

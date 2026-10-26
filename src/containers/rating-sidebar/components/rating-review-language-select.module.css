@@ -1,0 +1,21 @@
+.select {
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  font: inherit;
+  font-size: 0.86rem;
+  color: #0f172a;
+  background: #fff;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.select:disabled {
+  color: #94a3b8;
+  background: #f1f5f9;
+}

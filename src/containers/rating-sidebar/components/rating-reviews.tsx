@@ -7,23 +7,26 @@ import * as styles from './rating-reviews.module.css';
 
 type RatingReviewsProps = {
   reviews: SteamReview[];
+  reviewsLoading?: boolean;
 };
 
 export const RatingReviews = memo(function RatingReviews({
   reviews,
+  reviewsLoading = false,
 }: RatingReviewsProps) {
-  if (reviews.length === 0) {
-    return null;
-  }
-
   const reviewItems = reviews.map((review) => (
     <RatingReview key={review.recommendationId} review={review} />
   ));
 
   return (
-    <section className={styles.reviews}>
+    <section className={styles.reviews} aria-busy={reviewsLoading}>
       <h3 className={styles.title}>{TEXT.ratingRecent}</h3>
-      <ul className={styles.list}>{reviewItems}</ul>
+
+      {reviews.length === 0 ? (
+        <p className={styles.empty}>{TEXT.ratingReviewsEmpty}</p>
+      ) : (
+        <ul className={styles.list}>{reviewItems}</ul>
+      )}
     </section>
   );
 });
