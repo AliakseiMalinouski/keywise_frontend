@@ -53,6 +53,8 @@ After deploy, submit the sitemap in [Google Search Console](https://search.googl
 
 When you change marketing copy, keep **English** strings in sync: `index.html` (meta + shell), [`src/constants/text.ts`](src/constants/text.ts) (UI), and OG/JSON-LD in `index.html`.
 
+Google Search Console: [`index.html`](index.html) includes `google-site-verification` (token from the HTML-tag method in GSC). After deploy, click **Verify** in Search Console, then submit the sitemap URL.
+
 ## Search
 
 - **Game** is required.
