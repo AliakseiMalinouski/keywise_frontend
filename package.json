@@ -2,6 +2,8 @@
   "name": "keywise_frontend",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
+  "author": "Aliaksei Malinouski",
   "type": "module",
   "scripts": {
     "build": "rspack build",
