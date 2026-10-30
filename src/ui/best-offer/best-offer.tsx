@@ -13,21 +13,26 @@ export function BestOffer({ offer }: BestOfferProps) {
   const region = offer.region ? ` · ${offer.region.toUpperCase()}` : null;
 
   return (
-    <article className={styles.card}>
-      <p className={styles.kicker}>{TEXT.bestOffer}</p>
-      <h2 className={styles.title}>{offer.title}</h2>
+    <article className={styles.card} aria-label={`${TEXT.bestOffer}: ${offer.title}`}>
+      <header className={styles.header}>
+        <p className={styles.kicker}>{TEXT.bestOffer}</p>
+        <h2 className={styles.title}>{offer.title}</h2>
+      </header>
       <p className={styles.price}>
-        {offer.price.amount} {offer.price.currency}
+        <data value={offer.price.amount}>
+          {offer.price.amount} {offer.price.currency}
+        </data>
       </p>
       <p className={styles.meta}>
-        {marketAndSource}{DIVIDER}
-        {region && (
-          <span>{region}</span>
-        )}
+        {marketAndSource}
+        {DIVIDER}
+        {region && <span>{region}</span>}
       </p>
-      <a className={styles.link} href={offer.url} target="_blank" rel="noreferrer">
-        {TEXT.open}
-      </a>
+      <footer className={styles.footer}>
+        <a className={styles.link} href={offer.url} target="_blank" rel="noreferrer">
+          {TEXT.open}
+        </a>
+      </footer>
     </article>
   );
 }

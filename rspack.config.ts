@@ -14,6 +14,10 @@ export default defineConfig({
   entry: {
     main: './src/main.tsx',
   },
+  output: {
+    path: path.join(root, 'dist'),
+    clean: true,
+  },
   target: ['browserslist:last 2 versions, > 0.2%, not dead, Firefox ESR'],
   resolve: {
     extensions: ['...', '.ts', '.tsx', '.jsx'],
@@ -58,6 +62,15 @@ export default defineConfig({
     ],
   },
   plugins: [
+    new rspack.CopyRspackPlugin({
+      patterns: [
+        {
+          from: path.join(root, 'public'),
+          to: '.',
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
     new rspack.HtmlRspackPlugin({
       template: './index.html',
       favicon: './src/assets/gamepad.webp',

@@ -36,7 +36,7 @@ export function Wishlist({ games }: WishlistProps) {
       </button>
 
       {open && (
-        <div id="wishlist-games">
+        <section id="wishlist-games" aria-label={TEXT.wishlist}>
           {!hasItems && (
             <p className={styles.empty}>{TEXT.wishlistEmpty}</p>
           )}
@@ -47,7 +47,7 @@ export function Wishlist({ games }: WishlistProps) {
               ))}
             </ul>
           )}
-        </div>
+        </section>
       )}
     </article>
   );

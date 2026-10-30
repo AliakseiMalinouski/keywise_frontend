@@ -16,6 +16,29 @@
   color: #0f172a;
 }
 
+.stats {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+}
+
+.stat {
+  display: grid;
+  gap: 0.05rem;
+}
+
+.statLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .meta {
   margin: 0;
   font-size: 0.82rem;
@@ -23,16 +46,28 @@
 }
 
 .bar {
+  appearance: none;
+  display: block;
+  width: 100%;
   height: 0.5rem;
   margin-top: 0.15rem;
+  border: 0;
   border-radius: 999px;
-  background: #fecaca;
   overflow: hidden;
+  background: #fecaca;
 }
 
-.barFill {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
+.bar::-webkit-progress-bar {
+  border-radius: 999px;
+  background: #fecaca;
+}
+
+.bar::-webkit-progress-value {
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4ade80, #16a34a);
+}
+
+.bar::-moz-progress-bar {
+  border-radius: 999px;
   background: linear-gradient(90deg, #4ade80, #16a34a);
 }

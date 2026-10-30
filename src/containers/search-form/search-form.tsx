@@ -43,7 +43,12 @@ export function SearchForm({
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form
+      className={styles.form}
+      role="search"
+      aria-label={TEXT.title}
+      onSubmit={handleSubmit}
+    >
       <Label header={TEXT.game}>
         <input
           className={styles.input}

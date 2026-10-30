@@ -15,7 +15,9 @@ export const OfferRow = memo(({ row }: OfferRowProps) => {
       <td>{row.source}</td>
       <td>{row.title}</td>
       <td>
-        {row.amount} {row.currency}
+        <data value={row.amount}>
+          {row.amount} {row.currency}
+        </data>
       </td>
       <td>
         <a href={row.url} target="_blank" rel="noreferrer">

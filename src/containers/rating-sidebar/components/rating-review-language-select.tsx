@@ -1,7 +1,6 @@
 import type { ChangeEvent } from 'react';
 
 import { REVIEW_LANGUAGE_OPTIONS, TEXT, type ReviewLang } from '&constants';
-import { Label } from '&ui/label';
 import * as styles from './rating-review-language-select.module.css';
 
 type RatingReviewLanguageSelectProps = {
@@ -20,7 +19,8 @@ export function RatingReviewLanguageSelect({
   }
 
   return (
-    <Label header={TEXT.reviewLang}>
+    <fieldset className={styles.fieldset} disabled={disabled}>
+      <legend className={styles.legend}>{TEXT.reviewLang}</legend>
       <select
         className={styles.select}
         value={value}
@@ -33,6 +33,6 @@ export function RatingReviewLanguageSelect({
           </option>
         ))}
       </select>
-    </Label>
+    </fieldset>
   );
 }

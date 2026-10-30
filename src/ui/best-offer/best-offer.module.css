@@ -7,6 +7,11 @@
   background: #fff;
 }
 
+.header {
+  display: grid;
+  gap: 0.3rem;
+}
+
 .kicker {
   margin: 0;
   font-size: 0.72rem;
@@ -36,6 +41,10 @@
   margin: 0;
   font-size: 0.82rem;
   color: #71717a;
+}
+
+.footer {
+  margin: 0;
 }
 
 .link {

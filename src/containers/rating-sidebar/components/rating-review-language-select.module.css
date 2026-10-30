@@ -1,3 +1,21 @@
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.legend {
+  padding: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
 .select {
   width: 100%;
   box-sizing: border-box;
@@ -18,4 +36,8 @@
 .select:disabled {
   color: #94a3b8;
   background: #f1f5f9;
+}
+
+.fieldset:disabled .legend {
+  color: #94a3b8;
 }

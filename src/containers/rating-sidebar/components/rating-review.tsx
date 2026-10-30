@@ -32,12 +32,18 @@ export const RatingReview = memo(function RatingReview({
 
   return (
     <li className={styles.item}>
-      <div className={styles.header}>
-        <span className={verdictClassName}>{verdict}</span>
-        {meta && <span className={styles.meta}>{meta}</span>}
-      </div>
-      <p className={styles.text}>{text}</p>
-      {votesLabel && <p className={styles.votes}>{votesLabel}</p>}
+      <article>
+        <header className={styles.header}>
+          <strong className={verdictClassName}>{verdict}</strong>
+          {meta && <span className={styles.meta}>{meta}</span>}
+        </header>
+        <p className={styles.text}>{text}</p>
+        {votesLabel && (
+          <footer className={styles.votes}>
+            {votesLabel}
+          </footer>
+        )}
+      </article>
     </li>
   );
 });

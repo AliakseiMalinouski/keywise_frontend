@@ -15,9 +15,11 @@ export const RatingContent = memo(function RatingContent({
   const { appid } = rating;
 
   return (
-    <div className={styles.content}>
+    <section className={styles.content} aria-label="Steam rating details">
       <RatingSummary rating={rating} />
-      <RatingStoreLink appid={appid} />
-    </div>
+      <p className={styles.storeLink}>
+        <RatingStoreLink appid={appid} />
+      </p>
+    </section>
   );
 });

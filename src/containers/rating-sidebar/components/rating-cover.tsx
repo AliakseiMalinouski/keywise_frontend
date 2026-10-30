@@ -7,14 +7,16 @@ type RatingCoverProps = {
 
 export function RatingCover({ src, alt }: RatingCoverProps) {
   return (
-    <img
-      className={styles.cover}
-      src={src}
-      alt={alt}
-      width={460}
-      height={215}
-      loading="lazy"
-      decoding="async"
-    />
+    <figure className={styles.figure}>
+      <img
+        className={styles.cover}
+        src={src}
+        alt={alt}
+        width={460}
+        height={215}
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
   );
 }

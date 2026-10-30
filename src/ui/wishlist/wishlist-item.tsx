@@ -23,7 +23,7 @@ export const WishlistItem = memo(({ game }: WishlistItemProps) => {
         <span className={styles.name}>
           <span className={styles.title}>{title}</span>
           {game.selected && (
-            <span className={styles.badge}>{TEXT.selectedBadge}</span>
+            <mark className={styles.badge}>{TEXT.selectedBadge}</mark>
           )}
         </span>
         <span className={styles.link}>{TEXT.wishlistOpen}</span>

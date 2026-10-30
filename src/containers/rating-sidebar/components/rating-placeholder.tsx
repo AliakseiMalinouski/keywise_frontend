@@ -5,5 +5,9 @@ type RatingPlaceholderProps = {
 };
 
 export function RatingPlaceholder({ message }: RatingPlaceholderProps) {
-  return <p className={styles.placeholder}>{message}</p>;
+  return (
+    <p className={styles.placeholder} role="status">
+      {message}
+    </p>
+  );
 }

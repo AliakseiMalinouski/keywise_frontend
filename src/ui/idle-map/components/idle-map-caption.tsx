@@ -5,5 +5,5 @@ type IdleMapCaptionProps = {
 };
 
 export function IdleMapCaption({ text }: IdleMapCaptionProps) {
-  return <p className={styles.caption}>{text}</p>;
+  return <figcaption className={styles.caption}>{text}</figcaption>;
 }

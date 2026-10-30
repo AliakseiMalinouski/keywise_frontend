@@ -31,8 +31,13 @@ export const IdleMap = memo(function IdleMap({
   );
 
   return (
-    <div className={styles.wrap}>
-      <svg className={styles.map} viewBox="0 0 760 400" role="group" aria-label={TEXT.region}>
+    <figure className={styles.wrap}>
+      <svg
+        className={styles.map}
+        viewBox="0 0 760 400"
+        role="img"
+        aria-label={`${TEXT.region}: ${region.toUpperCase()}`}
+      >
         {regions.map(({ shape, selected, inEuroZone }) => (
           <IdleMapRegion
             key={shape.id}
@@ -47,6 +52,6 @@ export const IdleMap = memo(function IdleMap({
       </svg>
 
       <IdleMapCaption text={caption} />
-    </div>
+    </figure>
   );
 });

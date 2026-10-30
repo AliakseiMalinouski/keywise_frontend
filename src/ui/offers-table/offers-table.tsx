@@ -17,15 +17,15 @@ export function OffersTable({ data }: OffersTableProps) {
   }
 
   return (
-    <div className={styles.wrap}>
+    <section className={styles.wrap} aria-label="All offers">
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>{TEXT.source}</th>
-            <th>{TEXT.shop}</th>
-            <th>{TEXT.game}</th>
-            <th>{TEXT.price}</th>
-            <th>{TEXT.link}</th>
+            <th scope="col">{TEXT.source}</th>
+            <th scope="col">{TEXT.shop}</th>
+            <th scope="col">{TEXT.game}</th>
+            <th scope="col">{TEXT.price}</th>
+            <th scope="col">{TEXT.link}</th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +34,6 @@ export function OffersTable({ data }: OffersTableProps) {
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 }

@@ -1,11 +1,8 @@
 .page {
   min-height: 100vh;
-  padding: 2rem 1.25rem 3rem;
-}
-
-.shell {
   width: min(1180px, 100%);
   margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) min(22rem, 32%);
   gap: 1.25rem;
@@ -19,7 +16,7 @@
 }
 
 @media (max-width: 900px) {
-  .shell {
+  .page {
     grid-template-columns: 1fr;
   }
 }

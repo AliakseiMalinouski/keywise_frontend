@@ -15,18 +15,28 @@ export function RatingSummary({ rating }: RatingSummaryProps) {
     : `${TEXT.ratingScore}: ${rating.score}/9`;
   const totalReviewsMeta = `${formatCount(rating.totalReviews)} ${TEXT.ratingReviews}`;
   const barLabel = showBar ? `${percent}% ${TEXT.ratingPositive}` : '';
-  const barWidth = showBar ? `${percent}%` : '0%';
 
   return (
-    <div className={styles.summary}>
+    <section className={styles.summary} aria-label="Steam review summary">
       <p className={styles.score}>{rating.scoreDescription}</p>
-      <p className={styles.meta}>{scoreMeta}</p>
-      <p className={styles.meta}>{totalReviewsMeta}</p>
-      {showBar && (
-        <div className={styles.bar} role="img" aria-label={barLabel}>
-          <span className={styles.barFill} style={{ width: barWidth }} />
+      <dl className={styles.stats}>
+        <div className={styles.stat}>
+          <dt className={styles.statLabel}>{TEXT.ratingScore}</dt>
+          <dd className={styles.meta}>{scoreMeta}</dd>
         </div>
+        <div className={styles.stat}>
+          <dt className={styles.statLabel}>{TEXT.ratingReviews}</dt>
+          <dd className={styles.meta}>{totalReviewsMeta}</dd>
+        </div>
+      </dl>
+      {showBar && (
+        <progress
+          className={styles.bar}
+          max={100}
+          value={percent ?? 0}
+          aria-label={barLabel}
+        />
       )}
-    </div>
+    </section>
   );
 }

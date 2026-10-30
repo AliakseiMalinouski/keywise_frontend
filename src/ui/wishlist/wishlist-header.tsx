@@ -23,7 +23,7 @@ export function WishlistHeader({ count, selected, open }: WishlistHeaderProps) {
   return (
     <>
       <span className={styles.header}>
-        <span className={styles.kicker}>{TEXT.wishlist}</span>
+        <strong className={styles.kicker}>{TEXT.wishlist}</strong>
         <span className={styles.meta}>
           {gamesCount}
           {hasItems && (

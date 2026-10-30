@@ -68,8 +68,8 @@ export const RatingSidebar = memo(function RatingSidebar({
   const reviews: SteamReview[] = contentRating?.reviews ?? [];
 
   return (
-    <aside className={styles.sidebar} aria-label={TEXT.ratingTitle}>
-      <div className={styles.panel}>
+    <aside className={styles.sidebar} aria-labelledby="rating-sidebar-heading">
+      <section className={styles.panel}>
         {cover && <RatingCover alt={cover.alt} src={cover.src} />}
 
         <RatingHeader title={headerTitle} />
@@ -87,7 +87,7 @@ export const RatingSidebar = memo(function RatingSidebar({
         {showReviewList && (
           <RatingReviews reviews={reviews} reviewsLoading={reviewsLoading} />
         )}
-      </div>
+      </section>
     </aside>
   );
 });

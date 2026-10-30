@@ -1,11 +1,136 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keywise</title>
+    <meta
+      name="description"
+      content="Free price comparison for PC game keys. Search by game and region across CheapShark, GG.deals, and IsThereAnyDeal."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="canonical" href="https://keywise-frontend.vercel.app/" />
+    <title>Keywise — compare game key prices</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://keywise-frontend.vercel.app/" />
+    <meta property="og:title" content="Keywise — compare game key prices" />
+    <meta
+      property="og:description"
+      content="Free price comparison for PC game keys. Search by game and region across CheapShark, GG.deals, and IsThereAnyDeal."
+    />
+    <meta
+      property="og:image"
+      content="https://keywise-frontend.vercel.app/og-image.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Keywise — compare game key prices" />
+    <meta
+      name="twitter:description"
+      content="Free price comparison for PC game keys. Search by game and region across CheapShark, GG.deals, and IsThereAnyDeal."
+    />
+    <meta
+      name="twitter:image"
+      content="https://keywise-frontend.vercel.app/og-image.webp"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Keywise",
+        "description": "Free price comparison for PC game keys. Search by game and region across CheapShark, GG.deals, and IsThereAnyDeal.",
+        "url": "https://keywise-frontend.vercel.app/",
+        "inLanguage": "en",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/shell.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main class="kw-page">
+        <section class="kw-main" aria-labelledby="app-title">
+          <header class="kw-header">
+            <p class="kw-kicker">Keywise</p>
+            <h1 id="app-title" class="kw-title">Compare game key prices</h1>
+          </header>
+
+          <form
+            class="kw-form"
+            role="search"
+            aria-label="Compare game key prices"
+          >
+            <label class="kw-field">
+              <span class="kw-label">Game</span>
+              <input
+                class="kw-input"
+                type="text"
+                name="q"
+                placeholder="Elden Ring"
+                autocomplete="off"
+                disabled
+                aria-disabled="true"
+              />
+            </label>
+            <label class="kw-field">
+              <span class="kw-label">Region</span>
+              <select class="kw-input" name="region" disabled aria-disabled="true">
+                <option value="pl" selected>PL</option>
+              </select>
+            </label>
+            <label class="kw-field">
+              <span class="kw-label">Steam</span>
+              <input
+                class="kw-input"
+                type="text"
+                name="steam"
+                placeholder="Profile URL or SteamID"
+                autocomplete="off"
+                disabled
+                aria-disabled="true"
+              />
+            </label>
+            <button class="kw-submit" type="button" disabled aria-disabled="true">
+              Search
+            </button>
+          </form>
+
+          <section class="kw-results" aria-label="Search results">
+            <figure class="kw-map" role="img" aria-label="Region map">
+              <div class="kw-map-frame" aria-hidden="true"></div>
+              <figcaption>Region · PL</figcaption>
+            </figure>
+          </section>
+        </section>
+
+        <aside class="kw-aside" aria-labelledby="rating-sidebar-heading">
+          <section class="kw-panel">
+            <header class="kw-panel-header">
+              <p id="rating-sidebar-heading" class="kw-kicker">Steam reviews</p>
+            </header>
+            <p class="kw-placeholder">
+              Steam reviews will appear here after you search.
+            </p>
+          </section>
+        </aside>
+
+        <p class="kw-sr-only">
+          Free price comparison for PC game keys. Search by game and region across
+          CheapShark, GG.deals, and IsThereAnyDeal.
+        </p>
+
+        <noscript>
+          <p class="kw-noscript">
+            Enable JavaScript to search game keys and compare store prices.
+          </p>
+        </noscript>
+      </main>
+    </div>
   </body>
 </html>

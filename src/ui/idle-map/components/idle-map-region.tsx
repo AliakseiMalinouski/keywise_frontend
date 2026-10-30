@@ -52,7 +52,12 @@ export const IdleMapRegion = memo(function IdleMapRegion({
         onClick={handleClick}
         onKeyDown={handleKeyDown}
       />
-      <text x={shape.label.x} y={shape.label.y} className={labelClassName}>
+      <text
+        x={shape.label.x}
+        y={shape.label.y}
+        className={labelClassName}
+        aria-hidden="true"
+      >
         {label}
       </text>
     </g>

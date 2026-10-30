@@ -29,7 +29,7 @@ export function SearchResults({
   const wishlist = isSuccess ? data.wishlist : undefined;
 
   return (
-    <>
+    <section aria-label="Search results" aria-live="polite">
       {status === STATUS.idle && (
         <IdleMap region={region} onRegionChange={onRegionChange} />
       )}
@@ -43,6 +43,6 @@ export function SearchResults({
       {bestOffer && <BestOffer offer={bestOffer} />}
       {wishlist && <Wishlist games={wishlist} />}
       {isSuccess && <OffersTable data={data} />}
-    </>
+    </section>
   );
 }

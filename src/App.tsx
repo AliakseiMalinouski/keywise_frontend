@@ -88,40 +88,40 @@ function App() {
 
   return (
     <main className={styles.page}>
-      <div className={styles.shell}>
-        <section className={styles.main}>
-          <header className={styles.header}>
-            <p className={styles.kicker}>{TEXT.brand}</p>
-            <h1 className={styles.title}>{TEXT.title}</h1>
-          </header>
+      <section className={styles.main} aria-labelledby="app-title">
+        <header className={styles.header}>
+          <p className={styles.kicker}>{TEXT.brand}</p>
+          <h1 id="app-title" className={styles.title}>
+            {TEXT.title}
+          </h1>
+        </header>
 
-          <SearchForm
-            disabled={status === STATUS.loading}
-            region={region}
-            resetKey={resetKey}
-            onRegionChange={setRegion}
-            onSubmit={handleSearch}
-          />
-
-          <SearchResults
-            status={status}
-            data={data}
-            error={error}
-            region={region}
-            onRegionChange={setRegion}
-          />
-        </section>
-
-        <RatingSidebar
-          hasSearchData={data !== null}
-          image={data?.image}
-          rating={data?.rating ?? null}
-          reviewLang={reviewLang}
-          reviewsLoading={reviewsLoading}
-          status={status}
-          onReviewLangChange={handleReviewLangChange}
+        <SearchForm
+          disabled={status === STATUS.loading}
+          region={region}
+          resetKey={resetKey}
+          onRegionChange={setRegion}
+          onSubmit={handleSearch}
         />
-      </div>
+
+        <SearchResults
+          status={status}
+          data={data}
+          error={error}
+          region={region}
+          onRegionChange={setRegion}
+        />
+      </section>
+
+      <RatingSidebar
+        hasSearchData={data !== null}
+        image={data?.image}
+        rating={data?.rating ?? null}
+        reviewLang={reviewLang}
+        reviewsLoading={reviewsLoading}
+        status={status}
+        onReviewLangChange={handleReviewLangChange}
+      />
     </main>
   );
 }

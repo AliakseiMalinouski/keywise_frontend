@@ -45,7 +45,7 @@ export const IdleMapEuChip = memo(function IdleMapEuChip({
         onClick={handleClick}
         onKeyDown={handleKeyDown}
       />
-      <text className={labelClassName} x="388" y="88">
+      <text className={labelClassName} x="388" y="88" aria-hidden="true">
         {EU_LABEL}
       </text>
     </g>
