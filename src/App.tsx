@@ -17,6 +17,7 @@ function App() {
       setRegion,
       handleSearch,
       handleReviewLangChange,
+      handleReset,
     },
     outputs: {
       data,
@@ -54,6 +55,7 @@ function App() {
           error={error}
           region={region}
           onRegionChange={setRegion}
+          onReset={handleReset}
         />
       </section>
 

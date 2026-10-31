@@ -29,6 +29,7 @@ export function SearchForm({
 
   useEffect(() => {
     setQuery('');
+    setSteam('');
     onRegionChange(DEFAULT_SEARCH_REGION);
   }, [onRegionChange, resetKey]);
 

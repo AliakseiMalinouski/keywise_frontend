@@ -71,11 +71,26 @@ export const useSearch = () => {
         );
     }
 
+    function handleReset() {
+        if (status === STATUS.loading) {
+          return;
+        }
+
+        setStatus(STATUS.idle);
+        setData(null);
+        setError(null);
+        setSearchContext(null);
+        setRegion(DEFAULT_SEARCH_REGION);
+        setReviewLang(DEFAULT_REVIEW_LANG);
+        setResetKey((key) => key + 1);
+    }
+
     return {
         inputs: {
             setRegion,
             handleSearch,
             handleReviewLangChange,
+            handleReset,
         },
         outputs: {
             data,

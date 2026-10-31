@@ -7,6 +7,8 @@ export const TEXT = {
   steam: 'Steam',
   steamPlaceholder: 'Profile URL or SteamID',
   search: 'Search',
+  resetSearch: 'Clear',
+  resetSearchHint: 'Clear results and start over',
   loading: 'Searching…',
   searchFailed: 'Search failed',
   empty: 'Nothing found',

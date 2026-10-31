@@ -1,0 +1,9 @@
+.section {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+}

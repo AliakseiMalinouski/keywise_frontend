@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  border: 1px solid #e4e4e7;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem 0.45rem 0.7rem;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 560;
+  color: #52525b;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #d4d4d8;
+  color: #18181b;
+  background: #fafafa;
+  box-shadow: 0 1px 2px rgb(24 24 27 / 6%);
+}
+
+.button:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.icon {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  color: #71717a;
+}
+
+.button:hover:not(:disabled) .icon {
+  color: #18181b;
+}

@@ -35,7 +35,7 @@ export type SteamReviewLanguageCode = (typeof STEAM_REVIEW_LANGUAGE_CODES)[numbe
 
 export type ReviewLang = 'all' | SteamReviewLanguageCode;
 
-export const DEFAULT_REVIEW_LANG: ReviewLang = 'all';
+export const DEFAULT_REVIEW_LANG: ReviewLang = 'english';
 
 type ReviewLanguageOption = {
   value: ReviewLang;
