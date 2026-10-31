@@ -66,6 +66,7 @@ export const RatingSidebar = memo(function RatingSidebar({
       ? { src: image, alt: rating?.title ?? TEXT.ratingTitle }
       : null;
   const reviews: SteamReview[] = contentRating?.reviews ?? [];
+  const loading = status === STATUS.loading && !reviewsLoading;
 
   return (
     <aside className={styles.sidebar} aria-labelledby="rating-sidebar-heading">
@@ -80,7 +81,12 @@ export const RatingSidebar = memo(function RatingSidebar({
           onChange={onReviewLangChange}
         />
 
-        {placeholder && <RatingPlaceholder message={placeholder} />}
+        {placeholder && (
+          <RatingPlaceholder
+            loading={loading}
+            message={placeholder}
+          />
+        )}
 
         {contentRating && <RatingContent rating={contentRating} />}
 
