@@ -1,8 +1,14 @@
-.page {
+.layout {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
   width: min(1180px, 100%);
   margin: 0 auto;
-  padding: 2rem 1.25rem 3rem;
+  padding: 2rem 1.25rem 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) min(22rem, 32%);
   gap: 1.25rem;

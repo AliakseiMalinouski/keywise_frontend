@@ -8,6 +8,7 @@ import { SearchForm } from '&containers/search-form';
 import { RatingSidebar } from '&containers/rating-sidebar';
 import { SearchResults } from '&containers/search-results';
 import { SiteIntro } from '&containers/site-intro';
+import { SiteFooter } from '&containers/site-footer';
 
 import { useSearch } from './hooks';
 import * as styles from './App.module.css';
@@ -33,7 +34,8 @@ function App() {
   const reviewsLoading = useMemo(() => status === STATUS.loading && data !== null, [status, data]);
 
   return (
-    <main className={styles.page}>
+    <div className={styles.layout}>
+      <main className={styles.page}>
       <section className={styles.main} aria-labelledby="app-title">
         <header className={styles.header}>
           <p className={styles.kicker}>{TEXT.brand}</p>
@@ -71,7 +73,10 @@ function App() {
         status={status}
         onReviewLangChange={handleReviewLangChange}
       />
-    </main>
+      </main>
+
+      <SiteFooter />
+    </div>
   );
 }
 

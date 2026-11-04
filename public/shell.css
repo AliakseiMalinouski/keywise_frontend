@@ -9,11 +9,17 @@
   -webkit-font-smoothing: antialiased;
 }
 
-#root .kw-page {
+#root .kw-layout {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root .kw-page {
+  flex: 1;
   width: min(1180px, 100%);
   margin: 0 auto;
-  padding: 2rem 1.25rem 3rem;
+  padding: 2rem 1.25rem 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) min(22rem, 32%);
   gap: 1.25rem;
@@ -298,6 +304,51 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+#root .kw-footer {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 2.5rem;
+  border-top: 1px solid #f4f4f5;
+  box-sizing: border-box;
+}
+
+#root .kw-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.55rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+#root .kw-footer-sources {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #a1a1aa;
+}
+
+#root .kw-footer-link {
+  color: #71717a;
+  text-decoration: none;
+}
+
+#root .kw-footer-link:hover {
+  color: #52525b;
+}
+
+#root .kw-footer-link:focus-visible {
+  outline: 2px solid #d4d4d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+#root .kw-footer-sep {
+  color: #d4d4d8;
+  user-select: none;
 }
 
 @media (max-width: 900px) {

@@ -1,0 +1,44 @@
+.footer {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 2.5rem;
+  border-top: 1px solid #f4f4f5;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.55rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.sources {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #a1a1aa;
+}
+
+.link {
+  color: #71717a;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: #52525b;
+}
+
+.link:focus-visible {
+  outline: 2px solid #d4d4d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.sep {
+  color: #d4d4d8;
+  user-select: none;
+}

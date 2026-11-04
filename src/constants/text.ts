@@ -53,4 +53,8 @@ export const TEXT = {
   notFoundLead:
     'The link may be outdated or mistyped. Keywise only has the homepage for comparing game key prices—head back and run a new search.',
   notFoundHome: 'Back to price search',
+  footerNavLabel: 'Footer',
+  footerHome: 'Home',
+  footerHowItWorks: 'How it works',
+  footerSources: 'Price data from',
 } as const;
