@@ -20,7 +20,7 @@ export const RatingReviews = memo(function RatingReviews({
 
   return (
     <section className={styles.reviews} aria-busy={reviewsLoading}>
-      <h3 className={styles.title}>{TEXT.ratingRecent}</h3>
+      <h4 className={styles.title}>{TEXT.ratingRecent}</h4>
 
       {reviews.length === 0 ? (
         <p className={styles.empty}>{TEXT.ratingReviewsEmpty}</p>

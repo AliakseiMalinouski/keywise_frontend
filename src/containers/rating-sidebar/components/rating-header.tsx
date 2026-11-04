@@ -8,10 +8,10 @@ type RatingHeaderProps = {
 export function RatingHeader({ title }: RatingHeaderProps) {
   return (
     <header className={styles.header}>
-      <p id="rating-sidebar-heading" className={styles.kicker}>
+      <h2 id="rating-sidebar-heading" className={styles.kicker}>
         {TEXT.ratingTitle}
-      </p>
-      {title && <h2 className={styles.title}>{title}</h2>}
+      </h2>
+      {title && <h3 className={styles.title}>{title}</h3>}
     </header>
   );
 }

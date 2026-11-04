@@ -97,13 +97,61 @@
   margin: 0;
   padding-top: 0.75rem;
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
+}
+
+.section {
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sectionHeading {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+  color: #3f3f46;
 }
 
 .paragraph {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.55;
+  color: #52525b;
+}
+
+.noteBlock {
+  margin: 0.15rem 0 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.noteHeading4,
+.noteHeading5,
+.noteHeading6 {
+  margin: 0.35rem 0 0;
+  font-weight: 600;
+  color: #52525b;
+}
+
+.noteHeading4 {
+  font-size: 0.84rem;
+}
+
+.noteHeading5 {
+  font-size: 0.81rem;
+}
+
+.noteHeading6 {
+  font-size: 0.78rem;
+  color: #71717a;
+}
+
+.noteText {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: #52525b;
 }
 

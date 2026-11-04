@@ -46,13 +46,18 @@ function App() {
 
         <SiteIntro />
 
-        <SearchForm
-          disabled={status === STATUS.loading}
-          region={region}
-          resetKey={resetKey}
-          onRegionChange={setRegion}
-          onSubmit={handleSearch}
-        />
+        <section className={styles.searchSection} aria-labelledby="search-heading">
+          <h2 id="search-heading" className={styles.sectionHeading}>
+            {TEXT.searchFormHeading}
+          </h2>
+          <SearchForm
+            disabled={status === STATUS.loading}
+            region={region}
+            resetKey={resetKey}
+            onRegionChange={setRegion}
+            onSubmit={handleSearch}
+          />
+        </section>
 
         <SearchResults
           status={status}

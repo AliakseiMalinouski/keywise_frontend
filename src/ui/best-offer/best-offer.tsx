@@ -16,7 +16,7 @@ export function BestOffer({ offer }: BestOfferProps) {
     <article className={styles.card} aria-label={`${TEXT.bestOffer}: ${offer.title}`}>
       <header className={styles.header}>
         <p className={styles.kicker}>{TEXT.bestOffer}</p>
-        <h2 className={styles.title}>{offer.title}</h2>
+        <h3 className={styles.title}>{offer.title}</h3>
       </header>
       <p className={styles.price}>
         <data value={offer.price.amount}>

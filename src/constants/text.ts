@@ -41,12 +41,46 @@ export const TEXT = {
   ratingOpenSteam: 'Steam store page',
   ratingVotes: 'helpful',
   introHeading: 'How Keywise works',
-  introParagraphs: [
-    'Keywise brings PC game key prices from several deal aggregators into one search. Instead of opening CheapShark, GG.deals, and IsThereAnyDeal separately, enter a game title, pick your store region, and compare offers in a single table with the cheapest deal highlighted at the top.',
-    'Regions matter because key shops price titles differently for EU, US, Poland, and other markets. Choose the region that matches where you buy keys so the comparison reflects realistic checkout prices. The tool is free, requires no account, and runs entirely in your browser.',
-    'Optional Steam integration adds context next to the prices. Paste a public profile URL or SteamID64 and Keywise can tell you whether the game appears on that wishlist. After you search, Steam review summaries and recent player reviews show in the sidebar so you can weigh price against community feedback before you click through to a store.',
-    'The backend combines live offers from CheapShark, GG.deals, and IsThereAnyDeal so you see a wider slice of the key market than any single site lists alone. Whether you are hunting a launch discount, checking a wishlist item, or comparing regional pricing before a sale, Keywise is meant to save a few tabs and a few minutes.',
-    'Results load when you search, so listings reflect current deals rather than cached snapshots. Prices and availability come from third-party APIs and change often. Keywise does not sell keys; outbound links take you to the retailer or deal page where you complete the purchase. Always verify the edition, platform, and DRM on the store site before you buy.',
+  searchFormHeading: 'Search by game and region',
+  resultsSectionHeading: 'Search results',
+  footerSectionHeading: 'Site information',
+  footerNavHeading: 'Page links',
+  footerSourcesHeading: 'Price data sources',
+  introSections: [
+    {
+      heading: 'Compare offers in one search',
+      text: 'Keywise brings PC game key prices from several deal aggregators into one search. Instead of opening CheapShark, GG.deals, and IsThereAnyDeal separately, enter a game title, pick your store region, and compare offers in a single table with the cheapest deal highlighted at the top.',
+    },
+    {
+      heading: 'Pick the right store region',
+      text: 'Regions matter because key shops price titles differently for EU, US, Poland, and other markets. Choose the region that matches where you buy keys so the comparison reflects realistic checkout prices. The tool is free, requires no account, and runs entirely in your browser.',
+    },
+    {
+      heading: 'Steam wishlist and review context',
+      text: 'Optional Steam integration adds context next to the prices. Paste a public profile URL or SteamID64 and Keywise can tell you whether the game appears on that wishlist. After you search, Steam review summaries and recent player reviews show in the sidebar so you can weigh price against community feedback before you click through to a store.',
+    },
+    {
+      heading: 'Live data from multiple deal APIs',
+      text: 'The backend combines live offers from CheapShark, GG.deals, and IsThereAnyDeal so you see a wider slice of the key market than any single site lists alone. Whether you are hunting a launch discount, checking a wishlist item, or comparing regional pricing before a sale, Keywise is meant to save a few tabs and a few minutes.',
+    },
+    {
+      heading: 'Updates, disclaimers, and safe buying',
+      text: 'Results load when you search, so listings reflect current deals rather than cached snapshots. Prices and availability come from third-party APIs and change often.',
+      notes: [
+        {
+          heading: 'Before you buy from a store',
+          text: 'Keywise does not sell keys; outbound links take you to the retailer or deal page where you complete the purchase.',
+        },
+        {
+          heading: 'Confirm listing details',
+          text: 'Always verify the edition, platform, and DRM on the store site before you buy.',
+        },
+        {
+          heading: 'Regional and platform locks',
+          text: 'Activation region and launcher requirements vary by listing—double-check them on the store page.',
+        },
+      ],
+    },
   ],
   notFoundCode: '404',
   notFoundTitle: 'Page not found',

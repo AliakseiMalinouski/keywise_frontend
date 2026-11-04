@@ -24,6 +24,31 @@ function IntroChevron() {
   );
 }
 
+function IntroNote({
+  depth,
+  heading,
+  text,
+}: {
+  depth: 4 | 5 | 6;
+  heading: string;
+  text: string;
+}) {
+  const HeadingTag = depth === 4 ? 'h4' : depth === 5 ? 'h5' : 'h6';
+  const headingClass =
+    depth === 4
+      ? styles.noteHeading4
+      : depth === 5
+        ? styles.noteHeading5
+        : styles.noteHeading6;
+
+  return (
+    <div className={styles.noteBlock}>
+      <HeadingTag className={headingClass}>{heading}</HeadingTag>
+      <p className={styles.noteText}>{text}</p>
+    </div>
+  );
+}
+
 export function SiteIntro() {
   return (
     <details className={styles.details}>
@@ -38,10 +63,20 @@ export function SiteIntro() {
       <div className={styles.panel}>
         <div className={styles.panelInner}>
           <div className={styles.body}>
-            {TEXT.introParagraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 48)} className={styles.paragraph}>
-                {paragraph}
-              </p>
+            {TEXT.introSections.map((section) => (
+              <section key={section.heading} className={styles.section}>
+                <h3 className={styles.sectionHeading}>{section.heading}</h3>
+                <p className={styles.paragraph}>{section.text}</p>
+                {'notes' in section &&
+                  section.notes?.map((note, index) => (
+                    <IntroNote
+                      key={note.heading}
+                      depth={(index + 4) as 4 | 5 | 6}
+                      heading={note.heading}
+                      text={note.text}
+                    />
+                  ))}
+              </section>
             ))}
           </div>
         </div>

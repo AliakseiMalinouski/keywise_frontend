@@ -48,3 +48,18 @@
   letter-spacing: -0.03em;
   color: #18181b;
 }
+
+.sectionHeading {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.searchSection {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+}

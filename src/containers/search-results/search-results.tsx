@@ -1,5 +1,5 @@
 import type { SearchResponse } from '&network';
-import { STATUS, type SearchRegion, type Status } from '&constants';
+import { STATUS, TEXT, type SearchRegion, type Status } from '&constants';
 import { BestOffer } from '&ui/best-offer';
 import { IdleMap } from '&ui/idle-map';
 import { OffersTable } from '&ui/offers-table';
@@ -37,9 +37,12 @@ export function SearchResults({
   return (
     <section
       className={styles.section}
-      aria-label="Search results"
+      aria-labelledby="results-heading"
       aria-live="polite"
     >
+      <h2 id="results-heading" className={styles.heading}>
+        {TEXT.resultsSectionHeading}
+      </h2>
       {showReset && (
         <div className={styles.toolbar}>
           <SearchResetButton disabled={isLoading} onClick={onReset} />

@@ -155,7 +155,42 @@
   margin: 0;
   padding-top: 0.75rem;
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
+}
+
+#root .kw-intro-section {
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+#root .kw-intro-h3 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+  color: #3f3f46;
+}
+
+#root .kw-intro-h4,
+#root .kw-intro-h5,
+#root .kw-intro-h6 {
+  margin: 0.35rem 0 0;
+  font-weight: 600;
+  color: #52525b;
+}
+
+#root .kw-intro-h4 {
+  font-size: 0.84rem;
+}
+
+#root .kw-intro-h5 {
+  font-size: 0.81rem;
+}
+
+#root .kw-intro-h6 {
+  font-size: 0.78rem;
+  color: #71717a;
 }
 
 #root .kw-intro-body p {
@@ -165,9 +200,19 @@
   color: #52525b;
 }
 
-#root .kw-intro-body p:first-child {
-  font-size: 0.96rem;
-  color: #3f3f46;
+#root .kw-section-heading {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+#root .kw-search {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -225,6 +270,8 @@
 
 #root .kw-results {
   margin: 0;
+  display: grid;
+  gap: 0.55rem;
 }
 
 #root .kw-map {
@@ -314,12 +361,25 @@
   box-sizing: border-box;
 }
 
+#root .kw-footer-subheading {
+  margin: 0.65rem 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+#root .kw-footer-subheading:first-of-type {
+  margin-top: 0;
+}
+
 #root .kw-footer-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.35rem 0.55rem;
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-size: 0.78rem;
   line-height: 1.45;
 }
