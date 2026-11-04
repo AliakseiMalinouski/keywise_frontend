@@ -2,7 +2,7 @@
 
 **[Keywise](https://github.com/AliakseiMalinouski/keywise)** is a free web app for comparing PC game key prices in one search—no account, no hopping between deal sites.
 
-**Live:** [www.keywise.online](https://www.keywise.online)
+**Live:** [www.keywise.online](https://www.keywise.online/)
 
 Enter a game name and a store region (EU, US, PL, and others). The app queries the [Keywise API](https://github.com/AliakseiMalinouski/keywise) and lists offers from several sources, highlights the cheapest deal, and shows the rest in a table. Paste a Steam profile link or SteamID to see whether the game is on that wishlist, plus Steam review summary and recent reviews beside the prices.
 
