@@ -7,6 +7,7 @@ import {
 import { SearchForm } from '&containers/search-form';
 import { RatingSidebar } from '&containers/rating-sidebar';
 import { SearchResults } from '&containers/search-results';
+import { SiteIntro } from '&containers/site-intro';
 
 import { useSearch } from './hooks';
 import * as styles from './App.module.css';
@@ -40,6 +41,8 @@ function App() {
             {TEXT.title}
           </h1>
         </header>
+
+        <SiteIntro />
 
         <SearchForm
           disabled={status === STATUS.loading}
