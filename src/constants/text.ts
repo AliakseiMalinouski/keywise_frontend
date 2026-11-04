@@ -48,4 +48,9 @@ export const TEXT = {
     'The backend combines live offers from CheapShark, GG.deals, and IsThereAnyDeal so you see a wider slice of the key market than any single site lists alone. Whether you are hunting a launch discount, checking a wishlist item, or comparing regional pricing before a sale, Keywise is meant to save a few tabs and a few minutes.',
     'Results load when you search, so listings reflect current deals rather than cached snapshots. Prices and availability come from third-party APIs and change often. Keywise does not sell keys; outbound links take you to the retailer or deal page where you complete the purchase. Always verify the edition, platform, and DRM on the store site before you buy.',
   ],
+  notFoundCode: '404',
+  notFoundTitle: 'Page not found',
+  notFoundLead:
+    'The link may be outdated or mistyped. Keywise only has the homepage for comparing game key prices—head back and run a new search.',
+  notFoundHome: 'Back to price search',
 } as const;
