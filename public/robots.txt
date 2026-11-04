@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://keywise-frontend.vercel.app/sitemap.xml
+Sitemap: https://www.keywise.online/sitemap.xml
