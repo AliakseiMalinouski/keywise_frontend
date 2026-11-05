@@ -29,7 +29,7 @@ function isBestOffer(
 }
 
 export function toRows(data: SearchResponse): OfferRow[] {
-  return data.result.flatMap((block) =>
+  const rows = data.result.flatMap((block) =>
     block.data.map((offer, index) => ({
       key: `${block.source}-${offer.url}-${index}`,
       marketplace: block.source,
@@ -41,4 +41,17 @@ export function toRows(data: SearchResponse): OfferRow[] {
       isBest: isBestOffer(block.source, offer, data.best),
     })),
   );
+
+  return rows.sort((left, right) => {
+    if (left.isBest !== right.isBest) {
+      return left.isBest ? -1 : 1;
+    }
+
+    const currencyOrder = left.currency.localeCompare(right.currency);
+    if (currencyOrder !== 0) {
+      return currencyOrder;
+    }
+
+    return left.amount - right.amount;
+  });
 }
