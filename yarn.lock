@@ -940,7 +940,7 @@ __metadata:
     "@types/react-dom": "npm:19.3.0"
     dependency-cruiser: "npm:18.7.2"
     dotenv: "npm:18.0.1"
-    knip: "npm:^6.44.1"
+    knip: "npm:6.44.1"
     react: "npm:19.3.0"
     react-dom: "npm:19.3.0"
     react-refresh: "npm:0.19.0"
@@ -956,7 +956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"knip@npm:^6.44.1":
+"knip@npm:6.44.1":
   version: 6.44.1
   resolution: "knip@npm:6.44.1"
   dependencies:
