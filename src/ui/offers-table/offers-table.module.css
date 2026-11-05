@@ -1,5 +1,6 @@
 .wrap {
-  overflow-x: auto;
+  overflow: auto;
+  max-height: min(32rem, 70vh);
   border: 1px solid #ececec;
   border-radius: 12px;
 }
@@ -20,6 +21,9 @@
 }
 
 .table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.03em;
