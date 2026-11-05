@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 import type { GameRating, SteamReview } from '&network';
-import { STATUS, TEXT, type ReviewLang, type Status } from '&constants';
+import { STATUS, STEAM_STORE_URL, TEXT, type ReviewLang, type Status } from '&constants';
 import { RatingContent } from './components/rating-content.tsx';
 import { RatingCover } from './components/rating-cover.tsx';
 import { RatingHeader } from './components/rating-header.tsx';
@@ -84,6 +84,11 @@ export const RatingSidebar = memo(function RatingSidebar({
         {placeholder && (
           <RatingPlaceholder
             loading={loading}
+            link={
+              status === STATUS.idle
+                ? { href: STEAM_STORE_URL, label: TEXT.steamSourceLink }
+                : undefined
+            }
             message={placeholder}
           />
         )}

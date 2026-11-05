@@ -1,12 +1,19 @@
 import * as styles from './rating-placeholder.module.css';
 
+type RatingPlaceholderLink = {
+  href: string;
+  label: string;
+};
+
 type RatingPlaceholderProps = {
   loading?: boolean;
+  link?: RatingPlaceholderLink;
   message: string;
 };
 
 export function RatingPlaceholder({
   loading = false,
+  link,
   message,
 }: RatingPlaceholderProps) {
   const placeholderClassName = loading
@@ -28,9 +35,21 @@ export function RatingPlaceholder({
           />
         </svg>
       )}
-      <p className={placeholderClassName} role="status">
-        {message}
-      </p>
+      <div className={styles.content}>
+        <p className={placeholderClassName} role="status">
+          {message}
+        </p>
+        {link && (
+          <a
+            className={styles.link}
+            href={link.href}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {link.label}
+          </a>
+        )}
+      </div>
     </div>
   );
 }

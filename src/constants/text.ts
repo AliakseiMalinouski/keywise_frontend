@@ -50,6 +50,7 @@ export const TEXT = {
   ratingRecommended: 'Recommended',
   ratingNotRecommended: 'Not recommended',
   ratingOpenSteam: 'Steam store page',
+  steamSourceLink: 'Steam',
   ratingVotes: 'helpful',
   introHeading: 'How Keywise works',
   aboutTitle: 'About Keywise',
