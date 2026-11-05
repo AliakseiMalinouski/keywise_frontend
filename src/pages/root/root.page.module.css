@@ -29,7 +29,11 @@
 
 .header {
   display: grid;
-  gap: 0.25rem;
+  gap: 0.45rem;
+}
+
+.siteNav {
+  margin-top: 0.15rem;
 }
 
 .kicker {

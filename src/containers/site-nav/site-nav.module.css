@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.55rem;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.link {
+  color: #52525b;
+  font-weight: 520;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: #18181b;
+}
+
+.link:focus-visible {
+  outline: 2px solid #d4d4d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.link[aria-current='page'] {
+  color: #18181b;
+}
+
+.sep {
+  color: #d4d4d8;
+  user-select: none;
+}

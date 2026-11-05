@@ -14,9 +14,14 @@ export function NotFound() {
         </p>
         <h1 className={styles.title}>{TEXT.notFoundTitle}</h1>
         <p className={styles.lead}>{TEXT.notFoundLead}</p>
-        <Link className={styles.homeLink} to="/">
-          {TEXT.notFoundHome}
-        </Link>
+        <nav className={styles.links} aria-label={TEXT.siteNavLabel}>
+          <Link className={styles.homeLink} to="/">
+            {TEXT.notFoundHome}
+          </Link>
+          <Link className={styles.secondaryLink} to="/about/">
+            {TEXT.notFoundAbout}
+          </Link>
+        </nav>
       </article>
     </main>
   );

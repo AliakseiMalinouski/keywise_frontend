@@ -99,9 +99,12 @@ export const TEXT = {
   notFoundCode: '404',
   notFoundTitle: 'Page not found',
   notFoundLead:
-    'The link may be outdated or mistyped. Keywise only has the homepage for comparing game key prices—head back and run a new search.',
+    'The link may be outdated or mistyped. Head back to the price search or read the about page for how Keywise works.',
   notFoundHome: 'Back to price search',
+  notFoundAbout: 'About Keywise',
   footerNavLabel: 'Footer',
+  siteNavLabel: 'Site pages',
+  aboutSearchLink: 'Compare game key prices',
   footerHome: 'Home',
   footerAbout: 'About',
   footerSources: 'Price data from',

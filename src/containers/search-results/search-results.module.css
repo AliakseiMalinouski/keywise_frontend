@@ -3,15 +3,6 @@
   gap: 1.1rem;
 }
 
-.heading {
-  margin: 0;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #71717a;
-}
-
 .toolbar {
   display: flex;
   justify-content: flex-end;

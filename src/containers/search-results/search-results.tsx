@@ -40,12 +40,9 @@ export function SearchResults({
   return (
     <section
       className={styles.section}
-      aria-labelledby="results-heading"
+      aria-label={TEXT.resultsSectionHeading}
       aria-live="polite"
     >
-      <h2 id="results-heading" className={styles.heading}>
-        {TEXT.resultsSectionHeading}
-      </h2>
       {showReset && (
         <div className={styles.toolbar}>
           <SearchResetButton disabled={isLoading} onClick={onReset} />

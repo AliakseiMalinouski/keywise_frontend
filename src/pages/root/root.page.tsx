@@ -8,6 +8,7 @@ import { SearchForm } from '&containers/search-form';
 import { RatingSidebar } from '&containers/rating-sidebar';
 import { SearchResults } from '&containers/search-results';
 import { SiteFooter } from '&containers/site-footer';
+import { SiteNav } from '&containers/site-nav';
 
 import { useSearch } from '../../hooks';
 import * as styles from './root.page.module.css';
@@ -41,6 +42,7 @@ export function RootPage() {
           <h1 id="app-title" className={styles.title}>
             {TEXT.title}
           </h1>
+          <SiteNav className={styles.siteNav} />
         </header>
 
         <section className={styles.searchSection} aria-labelledby="search-heading">
