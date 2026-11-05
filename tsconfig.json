@@ -16,6 +16,7 @@
       "&network/*": ["./src/network/*"],
       "&constants": ["./src/constants/index.ts"],
       "&containers/*": ["./src/containers/*"],
+      "&pages/*": ["./src/pages/*"],
       "&ui/*": ["./src/ui/*"]
     },
 

@@ -26,6 +26,7 @@ export default defineConfig({
       '&network': path.resolve(root, 'src/network'),
       '&constants': path.resolve(root, 'src/constants'),
       '&containers': path.resolve(root, 'src/containers'),
+      '&pages': path.resolve(root, 'src/pages'),
       '&ui': path.resolve(root, 'src/ui'),
     },
   },

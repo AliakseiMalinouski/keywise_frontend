@@ -80,7 +80,7 @@ function mapSteamReview(dto: SteamReviewDto): SteamReview | null {
   };
 }
 
-export function mapGameRating(dto: GameRatingDto | null | undefined): GameRating | null {
+function mapGameRating(dto: GameRatingDto | null | undefined): GameRating | null {
   if (!dto) {
     return null;
   }
@@ -139,7 +139,7 @@ function mapImage(value: unknown): string | undefined {
   return image;
 }
 
-export function mapSearchResponse(dto: SearchResponseDto): SearchResponse {
+function mapSearchResponse(dto: SearchResponseDto): SearchResponse {
   const image = mapImage(dto.image);
 
   return {

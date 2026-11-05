@@ -10,10 +10,10 @@ import { SearchResults } from '&containers/search-results';
 import { SiteIntro } from '&containers/site-intro';
 import { SiteFooter } from '&containers/site-footer';
 
-import { useSearch } from './hooks';
-import * as styles from './App.module.css';
+import { useSearch } from '../../hooks';
+import * as styles from './root.page.module.css';
 
-function App() {
+export function RootPage() {
   const { 
     inputs: {
       setRegion,
@@ -84,5 +84,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

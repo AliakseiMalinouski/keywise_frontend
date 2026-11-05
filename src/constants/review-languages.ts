@@ -1,4 +1,4 @@
-export const STEAM_REVIEW_LANGUAGE_CODES = [
+const STEAM_REVIEW_LANGUAGE_CODES = [
   'arabic',
   'brazilian',
   'bulgarian',
@@ -31,7 +31,7 @@ export const STEAM_REVIEW_LANGUAGE_CODES = [
   'vietnamese',
 ] as const;
 
-export type SteamReviewLanguageCode = (typeof STEAM_REVIEW_LANGUAGE_CODES)[number];
+type SteamReviewLanguageCode = (typeof STEAM_REVIEW_LANGUAGE_CODES)[number];
 
 export type ReviewLang = 'all' | SteamReviewLanguageCode;
 

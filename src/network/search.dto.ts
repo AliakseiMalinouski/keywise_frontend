@@ -1,4 +1,4 @@
-export type OfferPriceDto = {
+type OfferPriceDto = {
   amount: number;
   currency: string;
 };
@@ -11,7 +11,7 @@ export type OfferDto = {
   price: OfferPriceDto;
 };
 
-export type SourceResultDto = {
+type SourceResultDto = {
   source: string;
   data: OfferDto[];
 };

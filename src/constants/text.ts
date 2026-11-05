@@ -2,7 +2,7 @@ export const TEXT = {
   brand: 'Keywise',
   title: 'Compare game key prices',
   game: 'Game',
-  gamePlaceholder: 'Elden Ring',
+  gamePlaceholder: 'Game title',
   region: 'Region',
   steam: 'Steam',
   steamPlaceholder: 'Profile URL or SteamID',
