@@ -52,6 +52,9 @@ export const TEXT = {
   ratingOpenSteam: 'Steam store page',
   ratingVotes: 'helpful',
   introHeading: 'How Keywise works',
+  aboutTitle: 'About Keywise',
+  aboutLead:
+    'Keywise compares PC game key prices from several deal aggregators in one search—free, in your browser, with optional Steam wishlist and review context.',
   searchFormHeading: 'Search by game and region',
   resultsSectionHeading: 'Search results',
   footerSectionHeading: 'Site information',
@@ -100,6 +103,6 @@ export const TEXT = {
   notFoundHome: 'Back to price search',
   footerNavLabel: 'Footer',
   footerHome: 'Home',
-  footerHowItWorks: 'How it works',
+  footerAbout: 'About',
   footerSources: 'Price data from',
 } as const;

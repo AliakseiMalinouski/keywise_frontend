@@ -7,7 +7,6 @@ import {
 import { SearchForm } from '&containers/search-form';
 import { RatingSidebar } from '&containers/rating-sidebar';
 import { SearchResults } from '&containers/search-results';
-import { SiteIntro } from '&containers/site-intro';
 import { SiteFooter } from '&containers/site-footer';
 
 import { useSearch } from '../../hooks';
@@ -43,8 +42,6 @@ export function RootPage() {
             {TEXT.title}
           </h1>
         </header>
-
-        <SiteIntro />
 
         <section className={styles.searchSection} aria-labelledby="search-heading">
           <h2 id="search-heading" className={styles.sectionHeading}>

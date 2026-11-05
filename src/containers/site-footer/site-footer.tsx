@@ -16,9 +16,9 @@ export function SiteFooter() {
         <span className={styles.sep} aria-hidden>
           ·
         </span>
-        <a className={styles.link} href="#intro-heading">
-          {TEXT.footerHowItWorks}
-        </a>
+        <Link className={styles.link} to="/about">
+          {TEXT.footerAbout}
+        </Link>
       </nav>
       <h3 className={styles.subheading}>{TEXT.footerSourcesHeading}</h3>
       <p className={styles.sources}>

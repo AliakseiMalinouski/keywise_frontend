@@ -1,1 +1,1 @@
-export { SiteIntro } from './site-intro.tsx';
+export { SiteIntroSections } from './site-intro.tsx';
