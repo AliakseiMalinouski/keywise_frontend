@@ -17,9 +17,9 @@
   background: #fff;
 }
 
-.input:focus {
-  outline: 2px solid #18181b;
-  outline-offset: 1px;
+.input:focus,
+.input:focus-visible {
+  outline: none;
 }
 
 .input:disabled {

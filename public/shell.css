@@ -282,6 +282,11 @@
   background: #fafafa;
 }
 
+#root .kw-input:focus,
+#root .kw-input:focus-visible {
+  outline: none;
+}
+
 #root .kw-submit {
   border: 0;
   border-radius: 10px;
