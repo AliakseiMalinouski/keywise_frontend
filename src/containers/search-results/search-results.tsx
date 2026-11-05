@@ -1,5 +1,6 @@
 import type { SearchResponse } from '&network';
 import { STATUS, TEXT, type SearchRegion, type Status } from '&constants';
+import { useSearchLoadingMessage } from '../../hooks';
 import { BestOffer } from '&ui/best-offer';
 import { IdleMap } from '&ui/idle-map';
 import { OffersTable } from '&ui/offers-table';
@@ -28,6 +29,8 @@ export function SearchResults({
   onReset,
 }: SearchResultsProps) {
   const isLoading = status === STATUS.loading;
+  const { message: loadingMessage, messageKey: loadingMessageKey } =
+    useSearchLoadingMessage(isLoading);
   const isError = status === STATUS.error && error;
   const isSuccess = status === STATUS.success && data;
   const bestOffer = isSuccess ? data.best : null;
@@ -53,7 +56,9 @@ export function SearchResults({
         <IdleMap region={region} onRegionChange={onRegionChange} />
       )}
 
-      {isLoading && <SearchLoader />}
+      {isLoading && (
+        <SearchLoader message={loadingMessage} messageKey={loadingMessageKey} />
+      )}
 
       {isError && (
         <StatusMessage kind={STATUS.error}>{error}</StatusMessage>
