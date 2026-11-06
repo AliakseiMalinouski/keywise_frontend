@@ -17,11 +17,11 @@
 
 #root .kw-page {
   flex: 1;
-  width: min(1180px, 100%);
+  width: min(1440px, 100%);
   margin: 0 auto;
   padding: 2rem 1.25rem 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) min(22rem, 32%);
+  grid-template-columns: minmax(0, 1fr) min(36rem, 40%);
   gap: 1.25rem;
   align-items: start;
   box-sizing: border-box;
@@ -222,7 +222,7 @@
 }
 
 #root .kw-footer {
-  width: min(1180px, 100%);
+  width: min(1440px, 100%);
   margin: 0 auto;
   padding: 2rem 1.25rem 2.5rem;
   border-top: 1px solid #f4f4f5;
