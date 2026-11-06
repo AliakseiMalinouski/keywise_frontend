@@ -4,11 +4,13 @@ import * as styles from './best-offer.module.css';
 
 type BestOfferProps = {
   offer: BestOfferData;
+  copied: boolean;
+  onShare: (title: string) => void;
 };
 
 const DIVIDER = ' ';
 
-export function BestOffer({ offer }: BestOfferProps) {
+export function BestOffer({ offer, copied, onShare }: BestOfferProps) {
   const marketAndSource = `${offer.marketplace} · ${offer.source}`;
   const region = offer.region ? ` · ${offer.region.toUpperCase()}` : null;
 
@@ -28,6 +30,26 @@ export function BestOffer({ offer }: BestOfferProps) {
         {DIVIDER}
         {region && <span>{region}</span>}
       </p>
+      <button
+        type="button"
+        className={copied ? `${styles.share} ${styles.shareCopied}` : styles.share}
+        title={TEXT.shareHint}
+        aria-label={TEXT.shareHint}
+        onClick={() => onShare(offer.title)}
+      >
+        <svg className={styles.shareIcon} viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="4" cy="8" r="1.6" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="11.6" cy="4.1" r="1.6" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="11.6" cy="11.9" r="1.6" stroke="currentColor" strokeWidth="1.5" />
+          <path
+            d="M5.5 7.15 10.05 5.05M5.5 8.85l4.55 2.1"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        </svg>
+        {copied ? TEXT.shareCopied : TEXT.share}
+      </button>
       <footer className={styles.footer}>
         <a className={styles.link} href={offer.url} target="_blank" rel="noreferrer">
           {TEXT.open}

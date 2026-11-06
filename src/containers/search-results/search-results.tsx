@@ -1,6 +1,6 @@
 import type { SearchResponse } from '&network';
 import { STATUS, TEXT, type SearchRegion, type Status } from '&constants';
-import { useSearchLoadingMessage } from '../../hooks';
+import { useCopyGameLink, useSearchLoadingMessage } from '../../hooks';
 import { BestOffer } from '&ui/best-offer';
 import { IdleMap } from '&ui/idle-map';
 import { OffersTable } from '&ui/offers-table';
@@ -31,6 +31,7 @@ export function SearchResults({
   const isLoading = status === STATUS.loading;
   const { message: loadingMessage, messageKey: loadingMessageKey } =
     useSearchLoadingMessage(isLoading);
+  const { copied, copyGameLink } = useCopyGameLink();
   const isError = status === STATUS.error && error;
   const isSuccess = status === STATUS.success && data;
   const bestOffer = isSuccess ? data.best : null;
@@ -61,7 +62,9 @@ export function SearchResults({
         <StatusMessage kind={STATUS.error}>{error}</StatusMessage>
       )}
 
-      {bestOffer && <BestOffer offer={bestOffer} />}
+      {bestOffer && (
+        <BestOffer offer={bestOffer} copied={copied} onShare={copyGameLink} />
+      )}
       {wishlist && <Wishlist games={wishlist} />}
       {isSuccess && <OffersTable data={data} />}
     </section>
