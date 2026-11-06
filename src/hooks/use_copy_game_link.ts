@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 
+import type { SearchRegion } from "&constants";
+
 const COPIED_RESET_MS = 2000;
 
-function shareUrl(title: string): string {
-  const params = new URLSearchParams({ game: title });
+function shareUrl(title: string, region: SearchRegion): string {
+  const params = new URLSearchParams({ game: title, region });
   return `${window.location.origin}/?${params.toString()}`;
 }
 
-export function useCopyGameLink() {
+export function useCopyGameLink(region: SearchRegion) {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export function useCopyGameLink() {
     }
 
     try {
-      await navigator.clipboard.writeText(shareUrl(gameTitle));
+      await navigator.clipboard.writeText(shareUrl(gameTitle, region));
       setCopied(true);
     } catch {
       setCopied(false);

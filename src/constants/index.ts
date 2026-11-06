@@ -1,5 +1,6 @@
 export {
   DEFAULT_SEARCH_REGION,
+  isSearchRegion,
   SEARCH_REGIONS,
   type SearchRegion,
 } from './regions.ts';

@@ -1,22 +1,31 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { searchGames, SearchResponse } from "&network";
-import { DEFAULT_REVIEW_LANG, DEFAULT_SEARCH_REGION, ReviewLang, SearchRegion, STATUS, Status, TEXT } from "&constants";
+import { DEFAULT_REVIEW_LANG, DEFAULT_SEARCH_REGION, isSearchRegion, ReviewLang, SearchRegion, STATUS, Status, TEXT } from "&constants";
 
 type SearchContext = {
     query: string;
     steam?: string;
   };
 
+function regionFromUrl(params: URLSearchParams): SearchRegion {
+    const region = params.get("region")?.trim().toLowerCase();
+    return region && isSearchRegion(region) ? region : DEFAULT_SEARCH_REGION;
+}
+
 export const useSearch = () => {
     const [resetKey, setResetKey] = useState<number>(0);
     const [error, setError] = useState<string | null>(null);
     const [status, setStatus] = useState<Status>(STATUS.idle);
     const [data, setData] = useState<SearchResponse | null>(null);
-    const [region, setRegion] = useState<SearchRegion>(DEFAULT_SEARCH_REGION);
+    const [region, setRegion] = useState<SearchRegion>(() =>
+        regionFromUrl(new URLSearchParams(window.location.search)),
+    );
     const [reviewLang, setReviewLang] = useState<ReviewLang>(DEFAULT_REVIEW_LANG);
     const [searchContext, setSearchContext] = useState<SearchContext | null>(null);
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState(
+        () => new URLSearchParams(window.location.search).get("game")?.trim() ?? '',
+    );
     const startedFromUrl = useRef(false);
 
     const executeSearch = useCallback(
@@ -59,14 +68,22 @@ export const useSearch = () => {
             return;
         }
 
-        const game = new URLSearchParams(window.location.search).get("game")?.trim();
-        if (!game) {
+        const params = new URLSearchParams(window.location.search);
+        const game = params.get("game")?.trim();
+        const hasRegion = Boolean(params.get("region")?.trim());
+        if (!game && !hasRegion) {
             return;
         }
 
         startedFromUrl.current = true;
+        const regionFromQuery = regionFromUrl(params);
+        setRegion(regionFromQuery);
+        if (!game) {
+            return;
+        }
+
         setQuery(game);
-        executeSearch(game, DEFAULT_SEARCH_REGION, undefined, DEFAULT_REVIEW_LANG);
+        executeSearch(game, regionFromQuery, undefined, DEFAULT_REVIEW_LANG);
     }, [executeSearch]);
 
     async function handleSearch(query: string, nextRegion: string, steam?: string) {

@@ -31,7 +31,7 @@ export function SearchResults({
   const isLoading = status === STATUS.loading;
   const { message: loadingMessage, messageKey: loadingMessageKey } =
     useSearchLoadingMessage(isLoading);
-  const { copied, copyGameLink } = useCopyGameLink();
+  const { copied, copyGameLink } = useCopyGameLink(region);
   const isError = status === STATUS.error && error;
   const isSuccess = status === STATUS.success && data;
   const bestOffer = isSuccess ? data.best : null;

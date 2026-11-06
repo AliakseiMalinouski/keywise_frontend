@@ -1,7 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react';
 
 import {
-  DEFAULT_SEARCH_REGION,
   TEXT,
   type SearchRegion,
 } from '&constants';
@@ -35,10 +34,8 @@ export function SearchForm({
       return;
     }
 
-    onQueryChange('');
     setSteam('');
-    onRegionChange(DEFAULT_SEARCH_REGION);
-  }, [onQueryChange, onRegionChange, resetKey]);
+  }, [resetKey]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
