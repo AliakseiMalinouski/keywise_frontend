@@ -17,6 +17,7 @@ export function RootPage() {
   const { 
     inputs: {
       setRegion,
+      setQuery,
       handleSearch,
       handleReviewLangChange,
       handleReset,
@@ -26,6 +27,7 @@ export function RootPage() {
       error,
       status,
       region,
+      query,
       resetKey,
       reviewLang,
     }
@@ -51,8 +53,10 @@ export function RootPage() {
           </h2>
           <SearchForm
             disabled={status === STATUS.loading}
+            query={query}
             region={region}
             resetKey={resetKey}
+            onQueryChange={setQuery}
             onRegionChange={setRegion}
             onSubmit={handleSearch}
           />

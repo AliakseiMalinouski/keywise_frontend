@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { searchGames, SearchResponse } from "&network";
 import { DEFAULT_REVIEW_LANG, DEFAULT_SEARCH_REGION, ReviewLang, SearchRegion, STATUS, Status, TEXT } from "&constants";
@@ -16,6 +16,16 @@ export const useSearch = () => {
     const [region, setRegion] = useState<SearchRegion>(DEFAULT_SEARCH_REGION);
     const [reviewLang, setReviewLang] = useState<ReviewLang>(DEFAULT_REVIEW_LANG);
     const [searchContext, setSearchContext] = useState<SearchContext | null>(null);
+    const [query, setQuery] = useState("");
+
+    useEffect(() => {
+        const game = new URLSearchParams(window.location.search).get("game")?.trim();
+        if (!game) {
+            return;
+        }
+
+        setQuery(game);
+    }, []);
 
     const executeSearch = useCallback(
         async (
@@ -82,12 +92,14 @@ export const useSearch = () => {
         setSearchContext(null);
         setRegion(DEFAULT_SEARCH_REGION);
         setReviewLang(DEFAULT_REVIEW_LANG);
+        setQuery("");
         setResetKey((key) => key + 1);
     }
 
     return {
         inputs: {
             setRegion,
+            setQuery,
             handleSearch,
             handleReviewLangChange,
             handleReset,
@@ -97,6 +109,7 @@ export const useSearch = () => {
             error,
             status,
             region,
+            query,
             resetKey,
             reviewLang,
         }

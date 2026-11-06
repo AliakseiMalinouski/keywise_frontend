@@ -1,6 +1,6 @@
 .wrap {
   overflow: auto;
-  max-height: min(32rem, 70vh);
+  max-height: min(37rem, 70vh);
   border: 1px solid #ececec;
   border-radius: 12px;
 }

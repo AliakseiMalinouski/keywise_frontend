@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 
 import {
   DEFAULT_SEARCH_REGION,
@@ -11,27 +11,36 @@ import { Regions } from './regions.tsx';
 
 type SearchFormProps = {
   disabled?: boolean;
+  query: string;
   region: SearchRegion;
   resetKey: number;
+  onQueryChange: (query: string) => void;
   onRegionChange: (region: SearchRegion) => void;
   onSubmit: (query: string, region: string, steam?: string) => void;
 };
 
 export function SearchForm({
   disabled = false,
+  query,
   region,
   resetKey,
+  onQueryChange,
   onRegionChange,
   onSubmit,
 }: SearchFormProps) {
-  const [query, setQuery] = useState('');
   const [steam, setSteam] = useState('');
+  const skipInitialReset = useRef(true);
 
   useEffect(() => {
-    setQuery('');
+    if (skipInitialReset.current) {
+      skipInitialReset.current = false;
+      return;
+    }
+
+    onQueryChange('');
     setSteam('');
     onRegionChange(DEFAULT_SEARCH_REGION);
-  }, [onRegionChange, resetKey]);
+  }, [onQueryChange, onRegionChange, resetKey]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -56,7 +65,7 @@ export function SearchForm({
           type="text"
           name="q"
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event) => onQueryChange(event.target.value)}
           placeholder={TEXT.gamePlaceholder}
           autoComplete="off"
           required
