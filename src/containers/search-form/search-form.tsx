@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 
 import {
   DEFAULT_SEARCH_REGION,
@@ -29,11 +29,9 @@ export function SearchForm({
   onSubmit,
 }: SearchFormProps) {
   const [steam, setSteam] = useState('');
-  const skipInitialReset = useRef(true);
 
   useEffect(() => {
-    if (skipInitialReset.current) {
-      skipInitialReset.current = false;
+    if (resetKey === 0) {
       return;
     }
 
