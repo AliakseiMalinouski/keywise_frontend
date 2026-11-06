@@ -45,9 +45,12 @@ function mapOffer(dto: OfferDto): Offer {
 }
 
 function mapBestOffer(dto: BestOfferDto): BestOffer {
+  const image = mapImage(dto.image);
+
   return {
     ...mapOffer(dto),
     marketplace: dto.marketplace,
+    ...(image ? { image } : {}),
   };
 }
 

@@ -8,6 +8,25 @@
   background: #fff;
 }
 
+.cardWithImage {
+  border-color: rgb(24 24 27 / 72%);
+  background-color: #18181b;
+  background-position: center;
+  background-size: cover;
+  color: #fafafa;
+}
+
+.cardWithImage .kicker,
+.cardWithImage .meta {
+  color: rgb(250 250 250 / 78%);
+}
+
+.cardWithImage .title,
+.cardWithImage .price,
+.cardWithImage .link {
+  color: #fafafa;
+}
+
 .header {
   display: grid;
   gap: 0.3rem;

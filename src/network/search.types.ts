@@ -18,6 +18,7 @@ type SourceResult = {
 
 export type BestOffer = Offer & {
   marketplace: string;
+  image?: string;
 };
 
 export type WishlistGame = {

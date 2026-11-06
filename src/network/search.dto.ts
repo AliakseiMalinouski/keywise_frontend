@@ -18,6 +18,7 @@ type SourceResultDto = {
 
 export type BestOfferDto = OfferDto & {
   marketplace: string;
+  image?: string;
 };
 
 export type WishlistGameDto = {

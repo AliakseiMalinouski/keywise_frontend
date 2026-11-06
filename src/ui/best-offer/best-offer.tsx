@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 import type { BestOffer as BestOfferData } from '&network';
 import { TEXT } from '&constants';
 import * as styles from './best-offer.module.css';
@@ -10,12 +12,25 @@ type BestOfferProps = {
 
 const DIVIDER = ' ';
 
+function backgroundStyle(image: string): CSSProperties {
+  const safeUrl = image.replace(/["\\\n\r]/g, '');
+
+  return {
+    backgroundImage: `linear-gradient(160deg, rgb(9 9 11 / 48%), rgb(9 9 11 / 68%)), url("${safeUrl}")`,
+  };
+}
+
 export function BestOffer({ offer, copied, onShare }: BestOfferProps) {
   const marketAndSource = `${offer.marketplace} · ${offer.source}`;
   const region = offer.region ? ` · ${offer.region.toUpperCase()}` : null;
+  const articleStyle = offer.image ? backgroundStyle(offer.image) : undefined;
 
   return (
-    <article className={styles.card} aria-label={`${TEXT.bestOffer}: ${offer.title}`}>
+    <article
+      className={offer.image ? `${styles.card} ${styles.cardWithImage}` : styles.card}
+      style={articleStyle}
+      aria-label={`${TEXT.bestOffer}: ${offer.title}`}
+    >
       <header className={styles.header}>
         <p className={styles.kicker}>{TEXT.bestOffer}</p>
         <h3 className={styles.title}>{offer.title}</h3>
