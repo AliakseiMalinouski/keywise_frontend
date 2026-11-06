@@ -103,7 +103,6 @@ export const TEXT = {
     'The link may be outdated or mistyped. Head back to the price search or read the about page for how Keywise works.',
   notFoundHome: 'Back to price search',
   notFoundAbout: 'About Keywise',
-  footerNavLabel: 'Footer',
   siteNavLabel: 'Site pages',
   aboutSearchLink: 'Compare game key prices',
   footerHome: 'Home',

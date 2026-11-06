@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import { DATA_SOURCES, TEXT } from '&constants';
 import { SiteNav } from '&containers/site-nav';
 

@@ -115,7 +115,6 @@ function mapGameRating(dto: GameRatingDto | null | undefined): GameRating | null
     score,
     scoreDescription,
     totalPositive,
-    totalNegative,
     totalReviews,
     reviews,
   };

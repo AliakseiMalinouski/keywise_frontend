@@ -74,7 +74,6 @@ export default defineConfig({
     }),
     new rspack.HtmlRspackPlugin({
       template: './index.html',
-      favicon: './src/assets/gamepad.webp',
     }),
     new rspack.DefinePlugin({
       'process.env.KEYWISE_API_PATH': JSON.stringify(apiPath),

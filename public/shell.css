@@ -82,150 +82,6 @@
   color: #18181b;
 }
 
-#root .kw-intro {
-  margin: 0;
-  padding: 0.85rem 1.15rem 1rem;
-  border: 1px solid #e4e4e7;
-  border-radius: 12px;
-  background: linear-gradient(165deg, #ffffff 0%, #f8f8fa 55%, #f4f4f5 100%);
-  box-shadow:
-    0 1px 2px rgb(24 24 27 / 4%),
-    inset 0 1px 0 rgb(255 255 255 / 90%);
-}
-
-#root .kw-intro-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-#root .kw-intro-summary::-webkit-details-marker {
-  display: none;
-}
-
-#root .kw-intro-summary::marker {
-  content: '';
-}
-
-#root .kw-intro-summary:focus {
-  outline: none;
-}
-
-#root .kw-intro-summary:focus-visible {
-  outline: 2px solid #a1a1aa;
-  outline-offset: 3px;
-  border-radius: 6px;
-}
-
-#root .kw-intro-heading {
-  margin: 0;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #71717a;
-}
-
-#root .kw-intro-chevron {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 999px;
-  color: #71717a;
-  background: rgb(255 255 255 / 72%);
-  box-shadow: inset 0 0 0 1px rgb(228 228 231 / 90%);
-  transition:
-    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.2s ease,
-    background-color 0.2s ease;
-}
-
-#root .kw-intro-chevron svg {
-  display: block;
-}
-
-#root .kw-intro[open] .kw-intro-chevron {
-  transform: rotate(180deg);
-  color: #52525b;
-  background: rgb(255 255 255 / 95%);
-}
-
-#root .kw-intro-summary:hover .kw-intro-chevron {
-  color: #52525b;
-  background: #fff;
-}
-
-#root .kw-intro-panel {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.38s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#root .kw-intro[open] .kw-intro-panel {
-  grid-template-rows: 1fr;
-}
-
-#root .kw-intro-panel-inner {
-  overflow: hidden;
-  min-height: 0;
-}
-
-#root .kw-intro-body {
-  margin: 0;
-  padding-top: 0.75rem;
-  display: grid;
-  gap: 1rem;
-}
-
-#root .kw-intro-section {
-  margin: 0;
-  display: grid;
-  gap: 0.45rem;
-}
-
-#root .kw-intro-h3 {
-  margin: 0;
-  font-size: 0.88rem;
-  font-weight: 620;
-  letter-spacing: -0.01em;
-  color: #3f3f46;
-}
-
-#root .kw-intro-h4,
-#root .kw-intro-h5,
-#root .kw-intro-h6 {
-  margin: 0.35rem 0 0;
-  font-weight: 600;
-  color: #52525b;
-}
-
-#root .kw-intro-h4 {
-  font-size: 0.84rem;
-}
-
-#root .kw-intro-h5 {
-  font-size: 0.81rem;
-}
-
-#root .kw-intro-h6 {
-  font-size: 0.78rem;
-  color: #71717a;
-}
-
-#root .kw-intro-body p {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: #52525b;
-}
-
 #root .kw-section-heading {
   margin: 0;
   font-size: 0.78rem;
@@ -239,13 +95,6 @@
   display: grid;
   gap: 0.55rem;
   margin: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #root .kw-intro-panel,
-  #root .kw-intro-chevron {
-    transition: none;
-  }
 }
 
 #root .kw-form {
@@ -370,18 +219,6 @@
   background: #f4f4f5;
   color: #3f3f46;
   font-size: 0.9rem;
-}
-
-#root .kw-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 #root .kw-footer {

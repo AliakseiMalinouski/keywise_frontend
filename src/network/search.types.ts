@@ -41,7 +41,6 @@ export type GameRating = {
   score: number;
   scoreDescription: string;
   totalPositive: number;
-  totalNegative: number;
   totalReviews: number;
   reviews: SteamReview[];
 };
