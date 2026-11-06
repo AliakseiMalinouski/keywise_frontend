@@ -13,6 +13,7 @@
   grid-template-columns: minmax(0, 1fr) min(22rem, 32%);
   gap: 1.25rem;
   align-items: start;
+  padding-bottom: 20px;
 }
 
 .main {
