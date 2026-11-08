@@ -10,20 +10,30 @@ type OfferRowProps = {
 
 export const OfferRow = memo(({ row }: OfferRowProps) => {
   return (
-    <tr className={row.isBest ? styles.best : undefined}>
-      <td>{row.marketplace}</td>
-      <td>{row.source}</td>
-      <td>{row.title}</td>
-      <td>
+    <a
+      role="row"
+      className={row.isBest ? `${styles.rowLink} ${styles.best}` : styles.rowLink}
+      href={row.url}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span role="cell" className={styles.td}>
+        {row.marketplace}
+      </span>
+      <span role="cell" className={styles.td}>
+        {row.source}
+      </span>
+      <span role="cell" className={styles.td}>
+        {row.title}
+      </span>
+      <span role="cell" className={styles.td}>
         <data value={row.amount}>
           {row.amount} {row.currency}
         </data>
-      </td>
-      <td>
-        <a href={row.url} target="_blank" rel="noreferrer">
-          {TEXT.open}
-        </a>
-      </td>
-    </tr>
+      </span>
+      <span role="cell" className={`${styles.td} ${styles.rowLinkLabel}`}>
+        {TEXT.open}
+      </span>
+    </a>
   );
 });

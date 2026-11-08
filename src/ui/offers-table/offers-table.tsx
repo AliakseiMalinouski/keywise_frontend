@@ -18,22 +18,28 @@ export function OffersTable({ data }: OffersTableProps) {
 
   return (
     <section className={styles.wrap} aria-label="All offers">
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th scope="col">{TEXT.source}</th>
-            <th scope="col">{TEXT.shop}</th>
-            <th scope="col">{TEXT.game}</th>
-            <th scope="col">{TEXT.price}</th>
-            <th scope="col">{TEXT.link}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <OfferRow key={row.key} row={row} />
-          ))}
-        </tbody>
-      </table>
+      <div className={styles.grid} role="table">
+        <div role="row" className={styles.headerRow}>
+          <span role="columnheader" className={styles.th}>
+            {TEXT.source}
+          </span>
+          <span role="columnheader" className={styles.th}>
+            {TEXT.shop}
+          </span>
+          <span role="columnheader" className={styles.th}>
+            {TEXT.game}
+          </span>
+          <span role="columnheader" className={styles.th}>
+            {TEXT.price}
+          </span>
+          <span role="columnheader" className={styles.th}>
+            {TEXT.link}
+          </span>
+        </div>
+        {rows.map((row) => (
+          <OfferRow key={row.key} row={row} />
+        ))}
+      </div>
     </section>
   );
 }
