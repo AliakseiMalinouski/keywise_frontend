@@ -1,13 +1,13 @@
 .footer {
   width: min(1440px, 100%);
   margin: 0 auto;
-  padding: 2rem 1.25rem 2.5rem;
+  padding: 32px 20px 40px;
   border-top: 1px solid #f4f4f5;
 }
 
 .sectionHeading {
-  margin: 0 0 0.55rem;
-  font-size: 0.78rem;
+  margin: 0 0 8.8px;
+  font-size: 12.48px;
   font-weight: 600;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -15,8 +15,8 @@
 }
 
 .subheading {
-  margin: 0.65rem 0 0.35rem;
-  font-size: 0.72rem;
+  margin: 10.4px 0 5.6px;
+  font-size: 11.52px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -33,7 +33,7 @@
 
 .sources {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 12.48px;
   line-height: 1.45;
   color: #a1a1aa;
 }

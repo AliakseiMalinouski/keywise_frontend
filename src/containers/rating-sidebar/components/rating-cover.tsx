@@ -12,8 +12,6 @@ export function RatingCover({ src, alt }: RatingCoverProps) {
         className={styles.cover}
         src={src}
         alt={alt}
-        width={460}
-        height={215}
         loading="lazy"
         decoding="async"
       />

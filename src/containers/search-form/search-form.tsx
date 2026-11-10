@@ -54,44 +54,55 @@ export function SearchForm({
       aria-label={TEXT.title}
       onSubmit={handleSubmit}
     >
-      <Label header={TEXT.game}>
-        <input
-          className={styles.input}
-          type="text"
-          name="q"
-          value={query}
-          onChange={(event) => onQueryChange(event.target.value)}
-          placeholder={TEXT.gamePlaceholder}
-          autoComplete="off"
-          required
-          disabled={disabled}
-        />
-      </Label>
+      <div className={styles.gameField}>
+        <Label header={TEXT.game}>
+          <input
+            className={styles.input}
+            type="text"
+            name="q"
+            value={query}
+            onChange={(event) => onQueryChange(event.target.value)}
+            placeholder={TEXT.gamePlaceholder}
+            autoComplete="off"
+            required
+            disabled={disabled}
+            aria-describedby="game-search-hint"
+          />
+        </Label>
+      </div>
 
-      <Label header={TEXT.region}>
-        <select
-          className={styles.input}
-          name="region"
-          value={region}
-          onChange={(event) => onRegionChange(event.target.value as SearchRegion)}
-          disabled={disabled}
-        >
-          <Regions />
-        </select>
-      </Label>
+      <p id="game-search-hint" className={styles.gameHint}>
+        {TEXT.gameSearchHint}
+      </p>
 
-      <Label header={TEXT.steam}>
-        <input
-          className={styles.input}
-          type="text"
-          name="steam"
-          value={steam}
-          onChange={(event) => setSteam(event.target.value)}
-          placeholder={TEXT.steamPlaceholder}
-          autoComplete="off"
-          disabled={disabled}
-        />
-      </Label>
+      <div className={styles.regionField}>
+        <Label header={TEXT.region}>
+          <select
+            className={styles.input}
+            name="region"
+            value={region}
+            onChange={(event) => onRegionChange(event.target.value as SearchRegion)}
+            disabled={disabled}
+          >
+            <Regions />
+          </select>
+        </Label>
+      </div>
+
+      <div className={styles.steamField}>
+        <Label header={TEXT.steam}>
+          <input
+            className={styles.input}
+            type="text"
+            name="steam"
+            value={steam}
+            onChange={(event) => setSteam(event.target.value)}
+            placeholder={TEXT.steamPlaceholder}
+            autoComplete="off"
+            disabled={disabled}
+          />
+        </Label>
+      </div>
 
       <button className={styles.submit} type="submit" disabled={disabled}>
         {TEXT.search}

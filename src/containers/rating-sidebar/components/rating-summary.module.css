@@ -1,7 +1,7 @@
 .summary {
   display: grid;
-  gap: 0.45rem;
-  padding: 0.85rem 0.9rem;
+  gap: 7.2px;
+  padding: 13.6px 14.4px;
   border: 1px solid #d8dee8;
   border-radius: 10px;
   background: #fff;
@@ -10,7 +10,7 @@
 
 .score {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 18.4px;
   font-weight: 650;
   letter-spacing: -0.02em;
   color: #0f172a;
@@ -18,13 +18,13 @@
 
 .stats {
   display: grid;
-  gap: 0.2rem;
+  gap: 3.2px;
   margin: 0;
 }
 
 .stat {
   display: grid;
-  gap: 0.05rem;
+  gap: 0.8px;
 }
 
 .statLabel {
@@ -41,7 +41,7 @@
 
 .meta {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 13.12px;
   color: #475569;
 }
 
@@ -49,8 +49,8 @@
   appearance: none;
   display: block;
   width: 100%;
-  height: 0.5rem;
-  margin-top: 0.15rem;
+  height: 8px;
+  margin-top: 2.4px;
   border: 0;
   border-radius: 999px;
   overflow: hidden;

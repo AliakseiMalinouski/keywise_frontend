@@ -3,6 +3,7 @@ export const TEXT = {
   title: 'Compare game key prices',
   game: 'Game',
   gamePlaceholder: 'Game title',
+  gameSearchHint: 'For the best results, enter the game title as precisely as possible.',
   region: 'Region',
   steam: 'Steam',
   steamPlaceholder: 'Profile URL or SteamID',

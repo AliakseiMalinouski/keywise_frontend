@@ -1,13 +1,13 @@
 .button {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 7.2px;
   margin: 0;
   border: 1px solid #e4e4e7;
   border-radius: 999px;
-  padding: 0.45rem 0.85rem 0.45rem 0.7rem;
+  padding: 7.2px 13.6px 7.2px 11.2px;
   font: inherit;
-  font-size: 0.86rem;
+  font-size: 13.76px;
   font-weight: 560;
   color: #52525b;
   background: #fff;
@@ -38,8 +38,8 @@
 
 .icon {
   display: inline-flex;
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   color: #71717a;
 }
 

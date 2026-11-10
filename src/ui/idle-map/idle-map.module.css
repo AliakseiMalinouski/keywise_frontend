@@ -1,13 +1,13 @@
 .wrap {
   display: grid;
   justify-items: center;
-  gap: 0.55rem;
-  padding: 0.4rem 0 0.2rem;
+  gap: 8.8px;
+  padding: 6.4px 0 3.2px;
 }
 
 .map {
   display: block;
-  width: min(40rem, 100%);
+  width: min(640px, 100%);
   height: auto;
 }
 
@@ -58,7 +58,7 @@
 
 .caption {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 12.48px;
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;

@@ -4,11 +4,10 @@
 
 .panel {
   position: sticky;
-  top: 1.25rem;
+  top: 20px;
   display: grid;
-  gap: 0.9rem;
-  min-height: 12rem;
-  padding: 1rem 1.05rem;
+  gap: 14.4px;
+  padding: 16px 16.8px;
   border: 1px solid #d4d4d8;
   border-radius: 12px;
   background: linear-gradient(180deg, #eef1f6 0%, #e8ecf2 100%);

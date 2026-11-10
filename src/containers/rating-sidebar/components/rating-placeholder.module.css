@@ -1,22 +1,18 @@
 .frame {
-  display: grid;
+  position: relative;
   --rating-placeholder-border: #c7d0dc;
-}
-
-.frame > * {
-  grid-area: 1 / 1;
 }
 
 .content {
   display: grid;
-  gap: 0.45rem;
+  gap: 7.2px;
   align-content: start;
 }
 
 .link {
   justify-self: start;
-  margin-left: 0.75rem;
-  font-size: 0.84rem;
+  margin-left: 12px;
+  font-size: 13.44px;
   font-weight: 560;
   color: #52525b;
   text-decoration: none;
@@ -33,9 +29,10 @@
 }
 
 .borderSvg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 0;
   overflow: visible;
   pointer-events: none;
 }
@@ -68,10 +65,10 @@
 
 .placeholder {
   margin: 0;
-  padding: 0.65rem 0.75rem;
+  padding: 10.4px 12px;
   border: 1px dashed var(--rating-placeholder-border);
   border-radius: 10px;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   line-height: 1.45;
   color: #475569;
   background: rgb(255 255 255 / 55%);

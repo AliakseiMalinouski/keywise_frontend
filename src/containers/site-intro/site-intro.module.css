@@ -1,18 +1,18 @@
 .body {
   margin: 0;
   display: grid;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .section {
   margin: 0;
   display: grid;
-  gap: 0.45rem;
+  gap: 7.2px;
 }
 
 .sectionHeading {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 14.08px;
   font-weight: 620;
   letter-spacing: -0.01em;
   color: #3f3f46;
@@ -20,46 +20,46 @@
 
 .paragraph {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 14.72px;
   line-height: 1.55;
   color: #52525b;
 }
 
 .noteBlock {
-  margin: 0.15rem 0 0;
+  margin: 2.4px 0 0;
   display: grid;
-  gap: 0.25rem;
+  gap: 4px;
 }
 
 .noteHeading4,
 .noteHeading5,
 .noteHeading6 {
-  margin: 0.35rem 0 0;
+  margin: 5.6px 0 0;
   font-weight: 600;
   color: #52525b;
 }
 
 .noteHeading4 {
-  font-size: 0.84rem;
+  font-size: 13.44px;
 }
 
 .noteHeading5 {
-  font-size: 0.81rem;
+  font-size: 12.96px;
 }
 
 .noteHeading6 {
-  font-size: 0.78rem;
+  font-size: 12.48px;
   color: #71717a;
 }
 
 .noteText {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   line-height: 1.5;
   color: #52525b;
 }
 
 .paragraph:first-of-type {
-  font-size: 0.96rem;
+  font-size: 15.36px;
   color: #3f3f46;
 }

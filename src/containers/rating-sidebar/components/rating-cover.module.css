@@ -4,9 +4,9 @@
 
 .cover {
   display: block;
-  width: 100%;
   height: auto;
-  aspect-ratio: 560 / 215;
+  max-width: 231px;
+  height: 87px;
   object-fit: cover;
   border: 1px solid rgb(24 24 27 / 8%);
   border-radius: 8px;

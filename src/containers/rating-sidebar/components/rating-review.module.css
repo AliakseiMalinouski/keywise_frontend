@@ -1,7 +1,7 @@
 .item {
   display: grid;
-  gap: 0.5rem;
-  padding: 0.8rem 0.85rem;
+  gap: 8px;
+  padding: 12.8px 13.6px;
   border: 1px solid #d8dee8;
   border-radius: 10px;
   background: #fff;
@@ -11,15 +11,15 @@
 .header {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 0.55rem;
+  gap: 6.4px 8.8px;
   align-items: center;
 }
 
 .verdictPositive,
 .verdictNegative {
-  padding: 0.18rem 0.5rem;
+  padding: 2.88px 8px;
   border-radius: 6px;
-  font-size: 0.68rem;
+  font-size: 10.88px;
   font-weight: 650;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -38,14 +38,14 @@
 }
 
 .meta {
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 500;
   color: #64748b;
 }
 
 .text {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.55;
   color: #1e293b;
   overflow-wrap: break-word;
@@ -57,9 +57,9 @@
 
 .votes {
   margin: 0;
-  padding-top: 0.15rem;
+  padding-top: 2.4px;
   border-top: 1px solid #f1f5f9;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 500;
   color: #64748b;
 }

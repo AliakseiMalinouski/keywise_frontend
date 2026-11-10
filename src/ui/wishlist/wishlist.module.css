@@ -1,7 +1,7 @@
 .card {
   display: grid;
-  gap: 0.7rem;
-  padding: 1rem 1.05rem;
+  gap: 11.2px;
+  padding: 16px 16.8px;
   border: 1px solid #ececec;
   border-radius: 12px;
   background: #fff;
@@ -28,7 +28,7 @@
 .toggle {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.75rem;
+  gap: 12px;
   align-items: center;
   width: 100%;
   margin: 0;
@@ -47,7 +47,7 @@
 
 .empty {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: #52525b;
 }
 
@@ -55,7 +55,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  max-height: 22rem;
+  max-height: 352px;
   overflow: auto;
   border: 1px solid #f4f4f5;
   border-radius: 10px;

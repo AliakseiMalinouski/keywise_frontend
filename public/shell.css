@@ -19,10 +19,10 @@
   flex: 1;
   width: min(1440px, 100%);
   margin: 0 auto;
-  padding: 2rem 1.25rem 0;
+  padding: 32px 20px 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) min(36rem, 40%);
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr) min(576px, 40%);
+  gap: 20px;
   align-items: start;
   box-sizing: border-box;
 }
@@ -30,12 +30,12 @@
 #root .kw-main {
   min-width: 0;
   display: grid;
-  gap: 1.1rem;
+  gap: 17.6px;
 }
 
 #root .kw-header {
   display: grid;
-  gap: 0.45rem;
+  gap: 7.2px;
   margin: 0;
 }
 
@@ -43,9 +43,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.35rem 0.55rem;
-  margin: 0.15rem 0 0;
-  font-size: 0.82rem;
+  gap: 5.6px 8.8px;
+  margin: 2.4px 0 0;
+  font-size: 13.12px;
   line-height: 1.45;
 }
 
@@ -67,7 +67,7 @@
 
 #root .kw-kicker {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -76,7 +76,7 @@
 
 #root .kw-title {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 27.2px;
   font-weight: 620;
   letter-spacing: -0.03em;
   color: #18181b;
@@ -84,7 +84,7 @@
 
 #root .kw-section-heading {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 12.48px;
   font-weight: 600;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -93,27 +93,27 @@
 
 #root .kw-search {
   display: grid;
-  gap: 0.55rem;
+  gap: 8.8px;
   margin: 0;
 }
 
 #root .kw-form {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) 5.6rem minmax(0, 1.3fr) auto;
-  gap: 0.7rem 0.65rem;
+  grid-template-columns: minmax(0, 1.4fr) 89.6px minmax(0, 1.3fr) auto;
+  gap: 11.2px 10.4px;
   align-items: end;
   margin: 0;
 }
 
 #root .kw-field {
   display: grid;
-  gap: 0.35rem;
+  gap: 5.6px;
   min-width: 0;
   margin: 0;
 }
 
 #root .kw-label {
-  font-size: 0.78rem;
+  font-size: 12.48px;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #71717a;
@@ -125,7 +125,7 @@
   appearance: none;
   border: 1px solid #e4e4e7;
   border-radius: 10px;
-  padding: 0.7rem 0.85rem;
+  padding: 11.2px 13.6px;
   font: inherit;
   color: #a1a1aa;
   background: #fafafa;
@@ -139,7 +139,7 @@
 #root .kw-submit {
   border: 0;
   border-radius: 10px;
-  padding: 0.7rem 1.1rem;
+  padding: 11.2px 17.6px;
   font: inherit;
   font-weight: 560;
   white-space: nowrap;
@@ -151,19 +151,19 @@
 #root .kw-results {
   margin: 0;
   display: grid;
-  gap: 0.55rem;
+  gap: 8.8px;
 }
 
 #root .kw-map {
   display: grid;
   justify-items: center;
-  gap: 0.55rem;
+  gap: 8.8px;
   margin: 0;
-  padding: 0.4rem 0 0.2rem;
+  padding: 6.4px 0 3.2px;
 }
 
 #root .kw-map-frame {
-  width: min(40rem, 100%);
+  width: min(640px, 100%);
   aspect-ratio: 760 / 400;
   margin: 0;
   border: 1px solid #ececec;
@@ -173,7 +173,7 @@
 
 #root .kw-map figcaption {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 13.12px;
   color: #71717a;
 }
 
@@ -184,12 +184,12 @@
 
 #root .kw-panel {
   position: sticky;
-  top: 1.25rem;
+  top: 20px;
   display: grid;
-  gap: 0.9rem;
-  min-height: 12rem;
+  gap: 14.4px;
+  min-height: 192px;
   margin: 0;
-  padding: 1rem 1.05rem;
+  padding: 16px 16.8px;
   border: 1px solid #d4d4d8;
   border-radius: 12px;
   background: linear-gradient(180deg, #eef1f6 0%, #e8ecf2 100%);
@@ -200,13 +200,13 @@
 
 #root .kw-panel-header {
   display: grid;
-  gap: 0.25rem;
+  gap: 4px;
   margin: 0;
 }
 
 #root .kw-placeholder {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 14.08px;
   line-height: 1.45;
   color: #64748b;
 }
@@ -214,24 +214,24 @@
 #root .kw-noscript {
   grid-column: 1 / -1;
   margin: 0;
-  padding: 0.85rem 1rem;
+  padding: 13.6px 16px;
   border-radius: 10px;
   background: #f4f4f5;
   color: #3f3f46;
-  font-size: 0.9rem;
+  font-size: 14.4px;
 }
 
 #root .kw-footer {
   width: min(1440px, 100%);
   margin: 0 auto;
-  padding: 2rem 1.25rem 2.5rem;
+  padding: 32px 20px 40px;
   border-top: 1px solid #f4f4f5;
   box-sizing: border-box;
 }
 
 #root .kw-footer-subheading {
-  margin: 0.65rem 0 0.35rem;
-  font-size: 0.72rem;
+  margin: 10.4px 0 5.6px;
+  font-size: 11.52px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -246,15 +246,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.35rem 0.55rem;
+  gap: 5.6px 8.8px;
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 12.48px;
   line-height: 1.45;
 }
 
 #root .kw-footer-sources {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 12.48px;
   line-height: 1.45;
   color: #a1a1aa;
 }
