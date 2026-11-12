@@ -4,6 +4,7 @@ import {
   TEXT,
   type SearchRegion,
 } from '&constants';
+import { GameSuggestions } from '&ui/game-suggestions';
 import { Label } from '&ui/label';
 import * as styles from './search-form.module.css';
 import { Regions } from './regions.tsx';
@@ -55,20 +56,22 @@ export function SearchForm({
       onSubmit={handleSubmit}
     >
       <div className={styles.gameField}>
-        <Label header={TEXT.game}>
-          <input
-            className={styles.input}
-            type="text"
-            name="q"
-            value={query}
-            onChange={(event) => onQueryChange(event.target.value)}
-            placeholder={TEXT.gamePlaceholder}
-            autoComplete="off"
-            required
-            disabled={disabled}
-            aria-describedby="game-search-hint"
-          />
-        </Label>
+        <GameSuggestions onSelect={onQueryChange}>
+          <Label header={TEXT.game}>
+            <input
+              className={styles.input}
+              type="text"
+              name="q"
+              value={query}
+              onChange={(event) => onQueryChange(event.target.value)}
+              placeholder={TEXT.gamePlaceholder}
+              autoComplete="off"
+              required
+              disabled={disabled}
+              aria-describedby="game-search-hint"
+            />
+          </Label>
+        </GameSuggestions>
       </div>
 
       <p id="game-search-hint" className={styles.gameHint}>

@@ -1,0 +1,9 @@
+.root {
+  position: relative;
+  min-width: 0;
+  z-index: 1000;
+}
+
+.trigger {
+  cursor: pointer;
+}
