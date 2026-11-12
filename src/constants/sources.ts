@@ -1,5 +1,9 @@
 export const STEAM_STORE_URL = 'https://store.steampowered.com/';
 
+export const VIBED_MARKET = {
+  href: 'https://www.vibedmarket.com/app/keywise?ref=open-button',
+} as const;
+
 export const DATA_SOURCES = [
   {
     name: 'CheapShark',

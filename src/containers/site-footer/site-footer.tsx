@@ -1,4 +1,4 @@
-import { DATA_SOURCES, TEXT } from '&constants';
+import { DATA_SOURCES, TEXT, VIBED_MARKET } from '&constants';
 import { SiteNav } from '&containers/site-nav';
 
 import * as styles from './site-footer.module.css';
@@ -26,6 +26,16 @@ export function SiteFooter() {
           </span>
         ))}
         .
+      </p>
+      <p className={styles.bottom}>
+        <a
+          className={styles.link}
+          href={VIBED_MARKET.href}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {TEXT.footerVibedMarket}
+        </a>
       </p>
     </footer>
   );

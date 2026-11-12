@@ -259,6 +259,13 @@
   color: #a1a1aa;
 }
 
+#root .kw-footer-bottom {
+  margin: 16px 0 0;
+  font-size: 12.48px;
+  line-height: 1.45;
+  color: #a1a1aa;
+}
+
 #root .kw-footer-link {
   color: #71717a;
   text-decoration: none;
