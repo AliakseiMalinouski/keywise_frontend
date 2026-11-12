@@ -4,6 +4,7 @@ export const TEXT = {
   game: 'Game',
   gamePlaceholder: 'Game title',
   gameSearchHint: 'For the best results, enter the game title as precisely as possible.',
+  gameSuggestionsEmpty: 'No matching suggestions',
   region: 'Region',
   steam: 'Steam',
   steamPlaceholder: 'Profile URL or SteamID',

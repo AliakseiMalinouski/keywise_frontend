@@ -5,13 +5,14 @@ import * as styles from './game-suggestions.module.css';
 
 type GameSuggestionsProps = {
   children: ReactNode;
+  query: string;
   onSelect: (title: string) => void;
 };
 
-export function GameSuggestions({ children, onSelect }: GameSuggestionsProps) {
+export function GameSuggestions({ children, query, onSelect }: GameSuggestionsProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleTriggerClick = () => {
+  const handleOpen = () => {
     setIsOpen(true);
   };
 
@@ -34,10 +35,10 @@ export function GameSuggestions({ children, onSelect }: GameSuggestionsProps) {
 
   return (
     <div className={styles.root} onBlur={handleBlur}>
-      <div className={styles.trigger} onClick={handleTriggerClick}>
+      <div className={styles.trigger} onClick={handleOpen} onFocusCapture={handleOpen}>
         {children}
       </div>
-      {isOpen && <GameSuggestionsList onSelect={handleSelect} />}
+      {isOpen && <GameSuggestionsList query={query} onSelect={handleSelect} />}
     </div>
   );
 }

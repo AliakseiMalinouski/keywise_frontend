@@ -28,3 +28,11 @@
 .item:hover {
   background: #f4f4f5;
 }
+
+.empty {
+  padding: 8px 10px;
+  font-size: inherit;
+  line-height: 1.35;
+  color: #71717a;
+  border-radius: 6px;
+}

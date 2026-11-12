@@ -56,7 +56,7 @@ export function SearchForm({
       onSubmit={handleSubmit}
     >
       <div className={styles.gameField}>
-        <GameSuggestions onSelect={onQueryChange}>
+        <GameSuggestions query={query} onSelect={onQueryChange}>
           <Label header={TEXT.game}>
             <input
               className={styles.input}
