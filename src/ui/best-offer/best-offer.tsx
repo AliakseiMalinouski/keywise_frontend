@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 
 import type { BestOffer as BestOfferData } from '&network';
 import { TEXT } from '&constants';
@@ -23,17 +23,49 @@ function backgroundStyle(image: string): CSSProperties {
 }
 
 export function BestOffer({ offer, copied, onShare }: BestOfferProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const marketAndSource = `${offer.marketplace} · ${offer.source}`;
   const region = offer.region ? ` · ${offer.region.toUpperCase()}` : null;
-  const articleStyle = offer.image ? backgroundStyle(offer.image) : undefined;
+  const hasImage = Boolean(offer.image);
+
+  useEffect(() => {
+    if (!offer.image) {
+      setImageLoaded(false);
+      return;
+    }
+
+    setImageLoaded(false);
+    const image = new Image();
+    image.src = offer.image;
+
+    const markLoaded = () => setImageLoaded(true);
+    if (image.complete) {
+      markLoaded();
+      return;
+    }
+
+    image.addEventListener('load', markLoaded);
+    image.addEventListener('error', markLoaded);
+
+    return () => {
+      image.removeEventListener('load', markLoaded);
+      image.removeEventListener('error', markLoaded);
+    };
+  }, [offer.image]);
 
   return (
     <a className={styles.cardLink} href={offer.url} target="_blank" rel="noreferrer">
       <article
-        className={offer.image ? `${styles.card} ${styles.cardWithImage}` : styles.card}
-        style={articleStyle}
+        className={hasImage ? `${styles.card} ${styles.cardWithImage}` : styles.card}
         aria-label={`${TEXT.bestOffer}: ${offer.title}`}
       >
+        {hasImage ? (
+          <div
+            className={`${styles.cardBackdrop} ${imageLoaded ? styles.cardBackdropReady : ''}`}
+            style={backgroundStyle(offer.image!)}
+            aria-hidden
+          />
+        ) : null}
         <header className={styles.header}>
           <p className={styles.kicker}>{TEXT.bestOffer}</p>
           <h3 className={styles.title}>{offer.title}</h3>

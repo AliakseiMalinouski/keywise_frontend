@@ -22,11 +22,40 @@
 }
 
 .cardWithImage {
+  overflow: hidden;
   border-color: rgb(24 24 27 / 72%);
   background-color: #18181b;
+  color: #fafafa;
+}
+
+.cardBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-position: center;
   background-size: cover;
-  color: #fafafa;
+  opacity: 0;
+  transform: scale(1.03);
+  transition:
+    opacity 0.55s ease-out,
+    transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.cardBackdropReady {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardBackdrop {
+    transform: none;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .cardBackdropReady {
+    transform: none;
+  }
 }
 
 .cardWithImage .kicker,
@@ -89,10 +118,19 @@
   text-underline-offset: 2px;
 }
 
+.cardWithImage .header,
+.cardWithImage .price,
+.cardWithImage .meta,
+.cardWithImage .footer {
+  position: relative;
+  z-index: 1;
+}
+
 .share {
   position: absolute;
   top: 11.2px;
   right: 11.2px;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 6.4px;
