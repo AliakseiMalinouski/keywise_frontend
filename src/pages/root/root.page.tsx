@@ -4,13 +4,14 @@ import {
   STATUS,
   TEXT,
 } from '&constants';
+import { BestOffer } from '&containers/best-offer';
 import { SearchForm } from '&containers/search-form';
 import { RatingSidebar } from '&containers/rating-sidebar';
 import { SearchResults } from '&containers/search-results';
 import { SiteFooter } from '&containers/site-footer';
 import { SiteNav } from '&containers/site-nav';
 
-import { useSearch } from '../../hooks';
+import { useCopyGameLink, useSearch } from '../../hooks';
 import * as styles from './root.page.module.css';
 
 export function RootPage() {
@@ -34,6 +35,9 @@ export function RootPage() {
   } = useSearch();
 
   const reviewsLoading = useMemo(() => status === STATUS.loading && data !== null, [status, data]);
+  const { copied, copyGameLink } = useCopyGameLink(region);
+  const bestOffer =
+    status === STATUS.success && data ? data.best : null;
 
   return (
     <div className={styles.layout}>
@@ -62,6 +66,15 @@ export function RootPage() {
           />
         </section>
 
+        {bestOffer && (
+          <BestOffer
+            offer={bestOffer}
+            requirements={data?.requirements ?? null}
+            copied={copied}
+            onShare={copyGameLink}
+          />
+        )}
+
         <SearchResults
           status={status}
           data={data}
@@ -83,7 +96,7 @@ export function RootPage() {
       />
       </main>
 
-      <SiteFooter />
+      <SiteFooter nav={<SiteNav />} />
     </div>
   );
 }

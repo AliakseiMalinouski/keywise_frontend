@@ -1,0 +1,77 @@
+.root {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 10.4px;
+  margin: 8px 0 0;
+  padding: 11.2px 0 0;
+  border-top: 1px solid rgb(24 24 27 / 10%);
+}
+
+.heading {
+  margin: 0;
+  font-size: 11.52px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.platform {
+  display: grid;
+  gap: 8px;
+}
+
+.platformLabel {
+  margin: 0;
+  font-size: 12.48px;
+  font-weight: 600;
+  color: #3f3f46;
+}
+
+.html {
+  font-size: 12.48px;
+  line-height: 1.5;
+  color: #52525b;
+}
+
+.html :global(strong),
+.html :global(b) {
+  font-weight: 600;
+  color: #3f3f46;
+}
+
+.html :global(ul) {
+  margin: 4px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.html :global(li) {
+  margin: 2px 0;
+}
+
+.html :global(ul:empty) {
+  display: none;
+}
+
+.onImage {
+  border-top-color: rgb(250 250 250 / 18%);
+}
+
+.onImage .heading {
+  color: rgb(250 250 250 / 72%);
+}
+
+.onImage .platformLabel {
+  color: rgb(250 250 250 / 92%);
+}
+
+.onImage .html {
+  color: rgb(250 250 250 / 86%);
+}
+
+.onImage .html :global(strong),
+.onImage .html :global(b) {
+  color: #fafafa;
+}

@@ -47,10 +47,23 @@ export type GameRatingDto = {
   reviews: SteamReviewDto[];
 };
 
+export type PlatformRequirementsDto = {
+  minimum?: string;
+  recommended?: string;
+};
+
+export type GameRequirementsDto = {
+  appid: number;
+  pc?: PlatformRequirementsDto;
+  mac?: PlatformRequirementsDto;
+  linux?: PlatformRequirementsDto;
+};
+
 export type SearchResponseDto = {
   result: SourceResultDto[];
   best: BestOfferDto | null;
   rating: GameRatingDto | null;
+  requirements: GameRequirementsDto | null;
   image?: string;
   wishlist?: WishlistGameDto[];
 };

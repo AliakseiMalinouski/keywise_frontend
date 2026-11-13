@@ -68,6 +68,19 @@ module.exports = {
       },
     },
     {
+      name: 'containers-no-cross-imports',
+      severity: 'error',
+      comment:
+        'Containers must not import other top-level containers; compose them from pages instead.',
+      from: {
+        path: '^src/containers/([^/]+)',
+      },
+      to: {
+        path: '^src/containers/',
+        pathNot: '^src/containers/$1',
+      },
+    },
+    {
       name: 'foundation-no-upward',
       severity: 'error',
       comment:

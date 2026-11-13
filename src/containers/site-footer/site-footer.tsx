@@ -1,14 +1,19 @@
+import type { ReactNode } from 'react';
+
 import { ALTERNATIVE_TO, DATA_SOURCES, TEXT, VIBED_MARKET } from '&constants';
-import { SiteNav } from '&containers/site-nav';
 
 import * as styles from './site-footer.module.css';
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  nav?: ReactNode;
+};
+
+export function SiteFooter({ nav }: SiteFooterProps) {
   return (
     <footer className={styles.footer}>
       <h2 className={styles.sectionHeading}>{TEXT.footerSectionHeading}</h2>
       <h3 className={styles.subheading}>{TEXT.footerNavHeading}</h3>
-      <SiteNav className={styles.nav} />
+      {nav ? <div className={styles.nav}>{nav}</div> : null}
       <h3 className={styles.subheading}>{TEXT.footerSourcesHeading}</h3>
       <p className={styles.sources}>
         {TEXT.footerSources}{' '}

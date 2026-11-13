@@ -1,7 +1,9 @@
 import type {
   BestOfferDto,
   GameRatingDto,
+  GameRequirementsDto,
   OfferDto,
+  PlatformRequirementsDto,
   SearchResponseDto,
   SteamReviewDto,
   WishlistGameDto,
@@ -9,7 +11,9 @@ import type {
 import type {
   BestOffer,
   GameRating,
+  GameRequirements,
   Offer,
+  PlatformRequirements,
   SearchResponse,
   SteamReview,
   WishlistGame,
@@ -83,6 +87,49 @@ function mapSteamReview(dto: SteamReviewDto): SteamReview | null {
   };
 }
 
+function mapPlatformRequirements(
+  dto: PlatformRequirementsDto | undefined,
+): PlatformRequirements | undefined {
+  if (!dto) {
+    return undefined;
+  }
+
+  const minimum = readString(dto.minimum) ?? undefined;
+  const recommended = readString(dto.recommended) ?? undefined;
+  if (!minimum && !recommended) {
+    return undefined;
+  }
+
+  return {
+    ...(minimum ? { minimum } : {}),
+    ...(recommended ? { recommended } : {}),
+  };
+}
+
+function mapGameRequirements(
+  dto: GameRequirementsDto | null | undefined,
+): GameRequirements | null {
+  if (!dto) {
+    return null;
+  }
+
+  const appid = readNumber(dto.appid);
+  if (appid === null) {
+    return null;
+  }
+
+  const pc = mapPlatformRequirements(dto.pc);
+  const mac = mapPlatformRequirements(dto.mac);
+  const linux = mapPlatformRequirements(dto.linux);
+
+  return {
+    appid,
+    ...(pc ? { pc } : {}),
+    ...(mac ? { mac } : {}),
+    ...(linux ? { linux } : {}),
+  };
+}
+
 function mapGameRating(dto: GameRatingDto | null | undefined): GameRating | null {
   if (!dto) {
     return null;
@@ -151,6 +198,7 @@ function mapSearchResponse(dto: SearchResponseDto): SearchResponse {
     })),
     best: dto.best ? mapBestOffer(dto.best) : null,
     rating: mapGameRating(dto.rating),
+    requirements: mapGameRequirements(dto.requirements),
     ...(image ? { image } : {}),
     wishlist: dto.wishlist?.map(mapWishlistGame),
   };

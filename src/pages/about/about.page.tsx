@@ -33,7 +33,7 @@ export function AboutPage() {
         </section>
       </main>
 
-      <SiteFooter />
+      <SiteFooter nav={<SiteNav />} />
     </div>
   );
 }

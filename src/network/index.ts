@@ -2,6 +2,7 @@ export { searchGames } from './search.ts';
 export type {
   BestOffer,
   GameRating,
+  GameRequirements,
   Offer,
   SearchResponse,
   SteamReview,

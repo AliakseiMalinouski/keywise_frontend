@@ -46,10 +46,23 @@ export type GameRating = {
   reviews: SteamReview[];
 };
 
+export type PlatformRequirements = {
+  minimum?: string;
+  recommended?: string;
+};
+
+export type GameRequirements = {
+  appid: number;
+  pc?: PlatformRequirements;
+  mac?: PlatformRequirements;
+  linux?: PlatformRequirements;
+};
+
 export type SearchResponse = {
   result: SourceResult[];
   best: BestOffer | null;
   rating: GameRating | null;
+  requirements: GameRequirements | null;
   image?: string;
   wishlist?: WishlistGame[];
 };
