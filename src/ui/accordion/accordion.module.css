@@ -1,0 +1,86 @@
+.root {
+  display: grid;
+  gap: 0;
+}
+
+.trigger {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.rootInverse .trigger:focus-visible {
+  outline-color: #fafafa;
+}
+
+.rootInverse .trigger {
+  color: rgb(250 250 250 / 92%);
+}
+
+.rootInverse .arrow {
+  color: rgb(250 250 250 / 86%);
+}
+
+.label {
+  min-width: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.arrow {
+  width: 6.72px;
+  height: 6.72px;
+  flex-shrink: 0;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+  color: #18181b;
+  transform: rotate(45deg);
+  transition: transform 0.18s ease;
+}
+
+.arrowOpen {
+  transform: rotate(-135deg);
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.22s ease;
+}
+
+.panelOpen {
+  grid-template-rows: 1fr;
+}
+
+.inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.panelOpen .inner {
+  padding-top: 10.4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    transition: none;
+  }
+
+  .panel {
+    transition: none;
+  }
+}
