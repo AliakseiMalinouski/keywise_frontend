@@ -60,3 +60,9 @@
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+.sep {
+  margin: 0 0.35em;
+  color: #d4d4d8;
+  user-select: none;
+}

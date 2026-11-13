@@ -4,6 +4,10 @@ export const VIBED_MARKET = {
   href: 'https://www.vibedmarket.com/app/keywise?ref=open-button',
 } as const;
 
+export const ALTERNATIVE_TO = {
+  href: 'https://alternativeto.net/software/keywise/about/',
+} as const;
+
 export const DATA_SOURCES = [
   {
     name: 'CheapShark',

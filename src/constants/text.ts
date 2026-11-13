@@ -114,4 +114,5 @@ export const TEXT = {
   footerAbout: 'About',
   footerSources: 'Price data from',
   footerVibedMarket: 'View the project on Vibed Market',
+  footerAlternativeTo: 'View the project on AlternativeTo',
 } as const;

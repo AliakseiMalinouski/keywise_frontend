@@ -1,4 +1,4 @@
-import { DATA_SOURCES, TEXT, VIBED_MARKET } from '&constants';
+import { ALTERNATIVE_TO, DATA_SOURCES, TEXT, VIBED_MARKET } from '&constants';
 import { SiteNav } from '&containers/site-nav';
 
 import * as styles from './site-footer.module.css';
@@ -35,6 +35,17 @@ export function SiteFooter() {
           target="_blank"
         >
           {TEXT.footerVibedMarket}
+        </a>
+        <span className={styles.sep} aria-hidden>
+          ·
+        </span>
+        <a
+          className={styles.link}
+          href={ALTERNATIVE_TO.href}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {TEXT.footerAlternativeTo}
         </a>
       </p>
     </footer>

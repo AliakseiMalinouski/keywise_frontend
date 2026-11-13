@@ -11,4 +11,9 @@ export {
 } from './review-languages.ts';
 export { STATUS, type Status } from './status.ts';
 export { TEXT } from './text.ts';
-export { DATA_SOURCES, STEAM_STORE_URL, VIBED_MARKET } from './sources.ts';
+export {
+  ALTERNATIVE_TO,
+  DATA_SOURCES,
+  STEAM_STORE_URL,
+  VIBED_MARKET,
+} from './sources.ts';
